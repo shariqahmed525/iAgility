@@ -4,9 +4,17 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        theme: "#1daeef",
         red: {
           DEFAULT: "#f53d4c"
         }
+      },
+      textColor: {
+        theme: "#1daeef",
+        navyblue: "#0d0f59",
+        primary: "#3490dc",
+        secondary: "#ffed4a",
+        danger: "#e3342f"
       }
     },
     boxShadow: {
