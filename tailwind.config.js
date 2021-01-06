@@ -11,6 +11,7 @@ module.exports = {
       },
       textColor: {
         theme: "#1daeef",
+        themegray: "#cdd5dd",
         navyblue: "#0d0f59",
         primary: "#3490dc",
         secondary: "#ffed4a",
