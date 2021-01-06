@@ -14,3 +14,23 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.top-nav {
+  padding-left: 9rem !important;
+}
+
+@media (max-width: 1400px) {
+  .top-nav {
+    padding-left: 2.5rem !important;
+  }
+}
+
+@media (max-width: 1024px) {
+  .top-nav {
+    padding-left: 0 !important;
+  }
+  .show-menu {
+    display: block !important;
+    transition: display 500ms ease-in;
+  }
+}
