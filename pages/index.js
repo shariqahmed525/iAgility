@@ -1,10 +1,26 @@
+import React, { useState } from "react";
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import { RiUser2Line } from "react-icons/ri";
-import { FiChevronRight } from "react-icons/fi";
+import { FiArrowLeft, FiArrowRight, FiChevronRight } from "react-icons/fi";
 import { AiOutlineLaptop } from "react-icons/ai";
 import { HiOutlineLightBulb } from "react-icons/hi";
 import { AgilityBox, BannerQuote, Navbar, UserCard } from "../components";
+
+const iAgilityBoxes = [
+  {
+    name: "Your New Competitve Advantage",
+    icon: <AiOutlineLaptop className="text-4xl md:text-2xl text-white" />
+  },
+  {
+    name: "Online Consulting Platform",
+    icon: <RiUser2Line className="text-4xl md:text-2xl text-orange" />
+  },
+  {
+    name: "Relationship Building",
+    icon: <HiOutlineLightBulb className="text-4xl md:text-2xl text-white" />
+  }
+];
 
 const BannerSection = () => {
   return (
@@ -101,6 +117,23 @@ const IAgilityText = () => {
 };
 
 const WhatIsiAgility = () => {
+  const [active, setActive] = useState(1);
+
+  const iAgilityActions = arrow => {
+    return (
+      <div className={"flex md:hidden flex-row justify-content items-center"}>
+        <div
+          className={
+            "w-16 h-16 bg-theme border border-theme shadow-theme border-opacity-75 rounded-full flex items-center justify-center"
+          }
+          style={{ minWidth: "3.5rem" }}
+        >
+          {arrow}
+        </div>
+      </div>
+    );
+  };
+
   return (
     <>
       <div className="py-10 px-5 lg:px-16 grid grid-cols-12 gap-4">
@@ -125,19 +158,18 @@ const WhatIsiAgility = () => {
       <div className="px-5 lg:px-16 grid grid-cols-12 gap-4">
         <div className="col-start-1 col-span-12 xl:col-start-3 xl:col-span-8 flex flex-col items-center pt-1">
           <div className="w-full flex justify-between">
-            <AgilityBox
-              title="Your New Competitve Advantage"
-              icon={<AiOutlineLaptop className="text-3xl text-white" />}
-            />
-            <AgilityBox
-              active
-              title="Online Consulting Platform"
-              icon={<RiUser2Line className="text-3xl text-orange" />}
-            />
-            <AgilityBox
-              title="Relationship Building"
-              icon={<HiOutlineLightBulb className="text-3xl text-white" />}
-            />
+            {iAgilityActions(<FiArrowLeft className="text-white text-2xl" />)}
+            {iAgilityBoxes.map((v, i) => {
+              return (
+                <AgilityBox
+                  key={i}
+                  icon={v.icon}
+                  title={v.name}
+                  active={active === i}
+                />
+              );
+            })}
+            {iAgilityActions(<FiArrowRight className="text-white text-2xl" />)}
           </div>
         </div>
       </div>

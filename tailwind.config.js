@@ -36,6 +36,10 @@ module.exports = {
     boxShadow: {
       red:
         "0 0 26px 0 rgba(245, 61, 76, 0.16), 0 13px 14px 0 rgba(245, 61, 76, .08), 0 18px 16px 0 rgba(245, 61, 76, .08)",
+      orange:
+        "0 0 26px 0 rgba(253, 120, 50, 0.16), 0 13px 14px 0 rgba(253, 120, 50, .08), 0 18px 16px 0 rgba(253, 120, 50, .08)",
+      theme:
+        "0 0 26px 0 rgba(29, 174, 239, 0.16), 0 13px 14px 0 rgba(29, 174, 239, .08), 0 18px 16px 0 rgba(29, 174, 239, .08)",
       sm: "0 1px 2px 0 rgba(0, 0, 0, 0.05)",
       DEFAULT:
         "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)",
@@ -49,6 +53,16 @@ module.exports = {
       "3xl": "0 35px 60px -15px rgba(0, 0, 0, 0.3)",
       inner: "inset 0 2px 4px 0 rgba(0, 0, 0, 0.06)",
       none: "none"
+    },
+    borderWidth: {
+      DEFAULT: "1px",
+      "0": "0",
+      "2": "2px",
+      "3": "3px",
+      "4": "4px",
+      "6": "6px",
+      "8": "8px",
+      "12": "12px"
     }
   },
   variants: {
