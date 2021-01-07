@@ -78,7 +78,7 @@ const IAgilityText = () => {
           </a>
         </span>
       </p>
-      <div className="flex flex-col xl:flex-row items-center pt-5 xl:pt-10">
+      <div className="flex flex-col xl:flex-row items-center pt-5">
         <a
           href="#"
           className="text-sm mt-2 mx-auto lg:mx-0 w-52 font-medium text-center text-white bg-red shadow-red rounded-full py-3 px-4 flex justify-between items-center"
