@@ -8,7 +8,7 @@ const BannerQuote = () => {
       <div>
         <ThreeDots />
       </div>
-      <p className="text-gray-500 text-sm max-w-md pt-3 text-center lg:text-left">
+      <p className="text-gray-500 text-base lg:text-sm max-w-md pt-3 text-center lg:text-left">
         <q>
           {" "}
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore,

@@ -5,17 +5,32 @@ module.exports = {
     extend: {
       colors: {
         theme: "#1daeef",
+        themedarkgray: "#b5bdc4",
         red: {
           DEFAULT: "#f53d4c"
+        },
+        orange: {
+          DEFAULT: "#fd7832"
         }
       },
       textColor: {
         theme: "#1daeef",
         themegray: "#cdd5dd",
+        themedarkgray: "#b5bdc4",
         navyblue: "#0d0f59",
+        orange: "#fd7832",
         primary: "#3490dc",
         secondary: "#ffed4a",
         danger: "#e3342f"
+      },
+      width: {
+        "1/7": "14.2857143%",
+        "2/7": "28.5714286%",
+        "3/7": "42.8571429%",
+        "4/7": "57.1428571%",
+        "5/7": "71.4285714%",
+        "6/7": "85.7142857%",
+        "32": "32%"
       }
     },
     boxShadow: {

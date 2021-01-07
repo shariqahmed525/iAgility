@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60.015" viewBox="0 0 60 60.015">
+    <defs>
+        <style>
+            .cls-1{fill:#b428a4}
+        </style>
+    </defs>
+    <g id="Artificial_Intelligence" transform="translate(-2 -1.985)">
+        <path id="Path_2473" d="M61 52h-3V19a3 3 0 0 0-3-3H37v-2h5a1 1 0 0 0 1-1V9.858a4 4 0 1 0-2 0V12h-5a1 1 0 0 0-1 1v3h-2V9.858a4 4 0 1 0-2 0V16h-2v-3a1 1 0 0 0-1-1h-5V9.858a4 4 0 1 0-2 0V13a1 1 0 0 0 1 1h5v2H9a3 3 0 0 0-3 3v33H3a1 1 0 0 0-1 1v4a5.006 5.006 0 0 0 5 5h50a5.006 5.006 0 0 0 5-5v-4a1 1 0 0 0-1-1zM40 6a2 2 0 1 1 2 2 2 2 0 0 1-2-2zM20 6a2 2 0 1 1 2 2 2 2 0 0 1-2-2zm13 13v1h-2v-1a1 1 0 0 1 2 0zm8 7a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H23a1 1 0 0 1-1-1V27a1 1 0 0 1 1-1zm-4-2H27v-1a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1zM30 6a2 2 0 1 1 2 2 2 2 0 0 1-2-2zM8 19a1 1 0 0 1 1-1h20.184A2.966 2.966 0 0 0 29 19v1h-1a3 3 0 0 0-3 3v1h-2a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h18a3 3 0 0 0 3-3V27a3 3 0 0 0-3-3h-2v-1a3 3 0 0 0-3-3h-1v-1a2.966 2.966 0 0 0-.184-1H55a1 1 0 0 1 1 1v33H42a1 1 0 0 0-1 1v2a1 1 0 0 1-1 1H24a1 1 0 0 1-1-1v-2a1 1 0 0 0-1-1H8zm52 38a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3v-3h17v1a3 3 0 0 0 3 3h16a3 3 0 0 0 3-3v-1h17z" class="cls-1"/>
+        <path id="Path_2474" d="M27 34a3 3 0 1 0-3-3 3 3 0 0 0 3 3zm0-4a1 1 0 1 1-1 1 1 1 0 0 1 1-1z" class="cls-1"/>
+        <path id="Path_2475" d="M37 34a3 3 0 1 0-3-3 3 3 0 0 0 3 3zm0-4a1 1 0 1 1-1 1 1 1 0 0 1 1-1z" class="cls-1"/>
+        <path id="Path_2476" d="M29 36h6v2h-6z" class="cls-1"/>
+        <path id="Path_2477" d="M25 36h2v2h-2z" class="cls-1"/>
+        <path id="Path_2478" d="M37 36h2v2h-2z" class="cls-1"/>
+        <path id="Path_2479" d="M12 23h2v2h-2z" class="cls-1"/>
+        <path id="Path_2480" d="M16 23h2v2h-2z" class="cls-1"/>
+        <path id="Path_2481" d="M12 27h2v2h-2z" class="cls-1"/>
+        <path id="Path_2482" d="M16 27h2v2h-2z" class="cls-1"/>
+        <path id="Path_2483" d="M12 31h2v2h-2z" class="cls-1"/>
+        <path id="Path_2484" d="M16 31h2v2h-2z" class="cls-1"/>
+        <path id="Path_2485" d="M12 35h2v2h-2z" class="cls-1"/>
+        <path id="Path_2486" d="M16 35h2v2h-2z" class="cls-1"/>
+        <path id="Path_2487" d="M12 39h2v2h-2z" class="cls-1"/>
+        <path id="Path_2488" d="M16 39h2v2h-2z" class="cls-1"/>
+        <path id="Path_2489" d="M46 23h2v2h-2z" class="cls-1"/>
+        <path id="Path_2490" d="M50 23h2v2h-2z" class="cls-1"/>
+        <path id="Path_2491" d="M46 27h2v2h-2z" class="cls-1"/>
+        <path id="Path_2492" d="M50 27h2v2h-2z" class="cls-1"/>
+        <path id="Path_2493" d="M46 31h2v2h-2z" class="cls-1"/>
+        <path id="Path_2494" d="M50 31h2v2h-2z" class="cls-1"/>
+        <path id="Path_2495" d="M46 35h2v2h-2z" class="cls-1"/>
+        <path id="Path_2496" d="M50 35h2v2h-2z" class="cls-1"/>
+        <path id="Path_2497" d="M46 39h2v2h-2z" class="cls-1"/>
+        <path id="Path_2498" d="M50 39h2v2h-2z" class="cls-1"/>
+        <path id="Path_2499" d="M12 44h40v2H12z" class="cls-1"/>
+        <path id="Path_2500" d="M12 48h40v2H12z" class="cls-1"/>
+    </g>
+</svg>
