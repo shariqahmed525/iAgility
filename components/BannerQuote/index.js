@@ -1,5 +1,5 @@
 import React from "react";
-import { ThreeDots } from "..";
+import { ThreeDots, Reviewer } from "..";
 import { FiArrowLeft, FiArrowRight } from "react-icons/fi";
 
 const BannerQuote = () => {
@@ -17,9 +17,7 @@ const BannerQuote = () => {
         </q>
       </p>
       <div className="py-5">
-        <span className="text-xs text-theme">M. Adnan</span>
-        <span className="px-2 text-themegray">|</span>
-        <span className="text-xs text-gray-400">Best Company</span>
+        <Reviewer name="M. Adnan" text="Best Company" />
       </div>
       <div className="flex flex-row">
         <a href="#" className="text-xl text-themegray">

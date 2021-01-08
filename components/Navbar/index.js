@@ -118,7 +118,7 @@ const Navbar = () => {
           <li className="lg:px-4 py-3 lg:py-2 mt-2">
             <a
               href="#"
-              className="lg:mx-0 mx-8 text-sm font-medium text-center text-white bg-red shadow-red rounded-full py-3 px-7"
+              className="lg:mx-0 mx-8 text-sm font-medium text-center text-white bg-theme-red shadow-red rounded-full py-3 px-7"
             >
               Sign Up
             </a>

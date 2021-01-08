@@ -3,17 +3,24 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+      // backgroundImage: theme => ({
+      //   tutorial: "url(" + require("./assets/images/tutorial.jpg") + ")"
+      // }),
       colors: {
-        theme: "#1daeef",
-        themedarkgray: "#b5bdc4",
-        red: {
-          DEFAULT: "#f53d4c"
-        },
-        orange: {
-          DEFAULT: "#fd7832"
+        theme: {
+          DEFAULT: "#1daeef",
+          yellow: "#ffc800",
+          darkgray: "#b5bdc4",
+          red: "#f53d4c",
+          darkblue: "#141660",
+          blue: "#2e319e",
+          navyblue: "#0d0f59",
+          green: "#47a835",
+          orange: "#fd7832"
         }
       },
       textColor: {
+        red: "#f53d4c",
         theme: "#1daeef",
         themegray: "#cdd5dd",
         themedarkgray: "#b5bdc4",
@@ -21,7 +28,8 @@ module.exports = {
         orange: "#fd7832",
         primary: "#3490dc",
         secondary: "#ffed4a",
-        danger: "#e3342f"
+        danger: "#e3342f",
+        yellow: "#ffc800"
       },
       width: {
         "1/7": "14.2857143%",
@@ -32,6 +40,14 @@ module.exports = {
         "6/7": "85.7142857%",
         "32": "32%"
       }
+    },
+    minHeight: {
+      "0": "0",
+      "1/4": "25%",
+      "1/2": "50%",
+      "3/4": "75%",
+      "90": "93%",
+      full: "100%"
     },
     boxShadow: {
       red:
@@ -63,6 +79,14 @@ module.exports = {
       "6": "6px",
       "8": "8px",
       "12": "12px"
+    },
+    screens: {
+      xs: "480px",
+      sm: "640px",
+      md: "768px",
+      lg: "1024px",
+      xl: "1280px",
+      "2xl": "1536px"
     }
   },
   variants: {
