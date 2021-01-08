@@ -4,14 +4,16 @@ import UserCard from "./UserCard";
 import ThreeDots from "./ThreeDots";
 import AgilityBox from "./AgilityBox";
 import BannerQuote from "./BannerQuote";
+import WhyChooseBox from "./WhyChooseBox";
 import IAgilityWorkBox from "./IAgilityWorkBox";
 
 export {
   Navbar,
   Reviewer,
-  ThreeDots,
   UserCard,
-  BannerQuote,
+  ThreeDots,
   AgilityBox,
+  BannerQuote,
+  WhyChooseBox,
   IAgilityWorkBox
 };

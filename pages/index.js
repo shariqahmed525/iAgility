@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
-import { RiUser2Line } from "react-icons/ri";
 import { BiPlay } from "react-icons/bi";
-import { FiArrowLeft, FiArrowRight, FiChevronRight } from "react-icons/fi";
+import { RiUser2Line } from "react-icons/ri";
 import { AiOutlineLaptop } from "react-icons/ai";
 import { HiOutlineLightBulb } from "react-icons/hi";
+import { FiArrowLeft, FiArrowRight, FiChevronRight } from "react-icons/fi";
 import {
   AgilityBox,
   BannerQuote,
@@ -13,21 +13,43 @@ import {
   Navbar,
   Reviewer,
   ThreeDots,
-  UserCard
+  UserCard,
+  WhyChooseBox
 } from "../components";
 
 const iAgilityBoxes = [
   {
     name: "Your New Competitve Advantage",
-    icon: <AiOutlineLaptop className="text-4xl md:text-2xl text-white" />
+    icon: active => (
+      <AiOutlineLaptop
+        className={`text-4xl md:text-2xl ${
+          active ? "text-yellow" : "text-white"
+        }`}
+      />
+    ),
+    img: require("../assets/images/table.jpg")
   },
   {
     name: "Online Consulting Platform",
-    icon: <RiUser2Line className="text-4xl md:text-2xl text-orange" />
+    icon: active => (
+      <RiUser2Line
+        className={`text-4xl md:text-2xl ${
+          active ? "text-orange" : "text-white"
+        }`}
+      />
+    ),
+    img: require("../assets/images/adviser-img.jpg")
   },
   {
     name: "Relationship Building",
-    icon: <HiOutlineLightBulb className="text-4xl md:text-2xl text-white" />
+    icon: active => (
+      <HiOutlineLightBulb
+        className={`text-4xl md:text-2xl ${
+          active ? "text-green" : "text-white"
+        }`}
+      />
+    ),
+    img: require("../assets/images/relationship.jpg")
   }
 ];
 
@@ -52,6 +74,44 @@ const HowDoesIAgilityBoxes = [
     image: require("../assets/images/icon-3.png"),
     text:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus at aperiam, reprehenderit ut exercitationem nemo praesentium laudantium aut."
+  }
+];
+
+const WhyChooseIAgilityBoxes = [
+  {
+    name: "Ringorous",
+    coloredText: "Vetting Process",
+    theme: "yellow",
+    text:
+      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique, adipisci reiciendis. Earum alias voluptatibus."
+  },
+  {
+    name: "Best",
+    coloredText: "Support",
+    theme: "green",
+    text:
+      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique, adipisci reiciendis. Earum alias voluptatibus."
+  },
+  {
+    name: "Online",
+    coloredText: "Dashboard",
+    theme: "orange",
+    text:
+      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique, adipisci reiciendis. Earum alias voluptatibus."
+  },
+  {
+    name: "Highest",
+    coloredText: "Qualified Consultant",
+    theme: "theme",
+    text:
+      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique, adipisci reiciendis.Earum alias voluptatibus harum iusto eius consequatur delectus aliquid totam."
+  },
+  {
+    name: "Personalized",
+    coloredText: "Care",
+    theme: "purple",
+    text:
+      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique, adipisci reiciendis.Earum alias voluptatibus harum iusto eius consequatur delectus aliquid totam."
   }
 ];
 
@@ -107,7 +167,7 @@ const BannerSection = () => {
 };
 
 const WhatIsiAgility = () => {
-  const [active, setActive] = useState(1);
+  const [active, setActive] = useState(0);
 
   const iAgilityText = () => {
     return (
@@ -200,9 +260,10 @@ const WhatIsiAgility = () => {
               return (
                 <AgilityBox
                   key={i}
-                  icon={v.icon}
-                  title={v.name}
+                  {...v}
+                  index={i}
                   active={active === i}
+                  setActive={index => setActive(index)}
                 />
               );
             })}
@@ -215,14 +276,14 @@ const WhatIsiAgility = () => {
         <div className="col-start-1 col-span-12 lg:col-start-3 lg:col-span-8 flex flex-col xl:flex-row items-center">
           <div className="flex flex-1 flex-col">
             <h3 className="font-bold text-3xl text-center xl:text-left py-2">
-              Online Consultanting Platform
+              {iAgilityBoxes[active].name}
             </h3>
             <div className="hidden xl:block">{iAgilityText()}</div>
           </div>
           <div className="flex flex-1 flex-col">
             <img
-              src={require("../assets/images/table-img.jpg")}
-              className="w-full"
+              src={iAgilityBoxes[active].img}
+              className="w-full max-h-100"
               alt=""
             />
             <div className="block xl:hidden">{iAgilityText()}</div>
@@ -262,14 +323,7 @@ const HowDoesIAgility = () => {
             className={`${active !== i &&
               "hidden"} xl:flex flex-1 flex-col items-center justify-between p-3`}
           >
-            <IAgilityWorkBox
-              index={i}
-              name={v.name}
-              text={v.text}
-              theme={v.theme}
-              image={v.image}
-              active={active === i}
-            />
+            <IAgilityWorkBox index={i} {...v} active={active === i} />
           </div>
         ))}
       </div>
@@ -317,6 +371,7 @@ const ClientsFeedBack = () => {
         {[0, 1].map((_, i) => {
           return (
             <div
+              key={i}
               className={`${i === 0 &&
                 "hidden "} lg:inline-block bg-white shadow-xl rounded-3xl my-2 p-6 w-full sm:w-80 md:w-80 lg:w-32 flex flex-col items-center lg:items-start`}
             >
@@ -394,6 +449,47 @@ const Home = () => {
 
         {/* Our Clients Feedback Section */}
         <ClientsFeedBack />
+
+        {/* Why Choose iAgility? Section */}
+        <div className="py-16 px-5 lg:px-16 grid grid-cols-12 gap-4">
+          <div className="col-start-1 col-span-12 lg:col-start-3 lg:col-span-8 flex flex-col-reverse 2xl:flex-row items-center justify-between">
+            <div
+              className="w-full xl:w-47 lg:w-6/7 sm:w-5/7 py-10 flex flex-col sm:flex-row justify-center items-center"
+              style={{
+                backgroundImage:
+                  "url(" + require("../assets/images/Union.svg") + ")",
+                backgroundSize: "contain",
+                backgroundRepeat: "no-repeat"
+              }}
+            >
+              <div className="flex w-full sm:w-auto flex-col mx-2 justify-center">
+                {WhyChooseIAgilityBoxes.slice(0, 3).map((v, i) => (
+                  <WhyChooseBox key={i} {...v} />
+                ))}
+              </div>
+              <div className="flex w-full sm:w-auto flex-col mx-2 justify-center">
+                {WhyChooseIAgilityBoxes.slice(3, 5).map((v, i) => (
+                  <WhyChooseBox key={i} {...v} />
+                ))}
+              </div>
+            </div>
+            <div className="w-full 2xl:w-47 lg:w-6/7 sm:w-5/7 pt-10">
+              <p className="text-navyblue font-bold text-4xl xl:text-5xl text-center 2xl:text-left py-3">
+                Why Choose <span className="text-theme">iAgility</span> Over
+                Other Platform?
+              </p>
+              <p className="py-3 font-light text-center 2xl:text-left">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Reiciendis non nesciunt esse beatae asperiores. Provident eaque
+                dolorem architecto quasi sed ratione consequatur porro? Sit
+                ipsum illum dolorem similique voluptate magni{" "}
+                <a href="#" className="text-theme font-semibold">
+                  your own personalized dashboard with ease!
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

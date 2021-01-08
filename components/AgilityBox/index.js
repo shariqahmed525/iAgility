@@ -1,23 +1,44 @@
 import React from "react";
 
-const AgilityBox = ({ title, icon, active }) => {
+const getClasses = key => {
+  switch (key) {
+    case 0:
+      return {
+        parentDiv: "shadow-yellow border-theme-yellow bg-theme-yellow",
+        childDiv: "bg-white border-theme-yellow"
+      };
+    case 1:
+      return {
+        parentDiv: "shadow-orange border-theme-orange bg-theme-orange",
+        childDiv: "bg-white border-theme-orange"
+      };
+    case 2:
+      return {
+        parentDiv: "shadow-green border-theme-green bg-theme-green",
+        childDiv: "bg-white border-theme-green"
+      };
+  }
+};
+
+const AgilityBox = ({ name, icon, active, index, setActive }) => {
   return (
     <div
       className={`
         ${
           active
-            ? "shadow-orange border-theme-orange bg-theme-orange"
-            : "hidden shadow-xl border-gray-100 bg-white"
+            ? `${getClasses(index).parentDiv} cursor-default`
+            : "hidden shadow-xl border-gray-100 bg-white cursor-pointer"
         } border 
         border-solid rounded-full md:w-32 md:h-20 md:flex flex-row justify-content items-center p-5 md:p-3
       `}
+      onClick={() => !active && setActive(index)}
     >
       <div
         className={`
           w-24 h-24 md:w-14 md:h-14 
           ${
             active
-              ? "bg-white border-theme-orange"
+              ? getClasses(index).childDiv
               : "bg-theme-darkgray border-gray"
           } 
           border-12 md:border-6 border-opacity-75
@@ -25,7 +46,7 @@ const AgilityBox = ({ title, icon, active }) => {
         `}
         style={{ minWidth: "3.5rem" }}
       >
-        {icon}
+        {icon(active)}
       </div>
       <p
         className={`
@@ -33,7 +54,7 @@ const AgilityBox = ({ title, icon, active }) => {
           md:flex flex-1 justify-center px-1 text-center font-semibold text-sm xl:text-base 
         `}
       >
-        {title}
+        {name}
       </p>
     </div>
   );

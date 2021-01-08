@@ -27,8 +27,10 @@ module.exports = {
         navyblue: "#0d0f59",
         orange: "#fd7832",
         primary: "#3490dc",
+        green: "#46a835",
         secondary: "#ffed4a",
         danger: "#e3342f",
+        purple: "#b428a4",
         yellow: "#ffc800"
       },
       width: {
@@ -38,7 +40,8 @@ module.exports = {
         "4/7": "57.1428571%",
         "5/7": "71.4285714%",
         "6/7": "85.7142857%",
-        "32": "32%"
+        "32": "32%",
+        "47": "47%"
       }
     },
     minHeight: {
@@ -54,6 +57,10 @@ module.exports = {
         "0 0 26px 0 rgba(245, 61, 76, 0.16), 0 13px 14px 0 rgba(245, 61, 76, .08), 0 18px 16px 0 rgba(245, 61, 76, .08)",
       orange:
         "0 0 26px 0 rgba(253, 120, 50, 0.16), 0 13px 14px 0 rgba(253, 120, 50, .08), 0 18px 16px 0 rgba(253, 120, 50, .08)",
+      yellow:
+        "0 0 26px 0 rgba(255, 200, 0, 0.16), 0 13px 14px 0 rgba(255, 200, 0, .08), 0 18px 16px 0 rgba(255, 200, 0, .08)",
+      green:
+        "0 0 26px 0 rgba(70, 168, 53, 0.16), 0 13px 14px 0 rgba(70, 168, 53, .08), 0 18px 16px 0 rgba(70, 168, 53, .08)",
       theme:
         "0 0 26px 0 rgba(29, 174, 239, 0.16), 0 13px 14px 0 rgba(29, 174, 239, .08), 0 18px 16px 0 rgba(29, 174, 239, .08)",
       sm: "0 1px 2px 0 rgba(0, 0, 0, 0.05)",
@@ -81,7 +88,7 @@ module.exports = {
       "12": "12px"
     },
     screens: {
-      xs: "480px",
+      xs: "425px",
       sm: "640px",
       md: "768px",
       lg: "1024px",
