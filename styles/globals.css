@@ -19,6 +19,26 @@ a {
   padding-left: 9rem !important;
 }
 
+/* Hide scrollbar for Chrome, Safari and Opera */
+.hide-scroll::-webkit-scrollbar {
+  /* display: none; */
+  width: 0px !important;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.hide-scroll {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.wrapper:hover > .arrow-div {
+  display: flex !important;
+}
+
+.wrapper:hover > .details-wrapper {
+  box-shadow: none !important;
+}
+
 @media (max-width: 1400px) {
   .top-nav {
     padding-left: 2.5rem !important;

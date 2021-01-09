@@ -3,9 +3,9 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
-      // backgroundImage: theme => ({
-      //   tutorial: "url(" + require("./assets/images/tutorial.jpg") + ")"
-      // }),
+      transitionProperty: {
+        display: "display"
+      },
       colors: {
         theme: {
           DEFAULT: "#1daeef",
@@ -16,6 +16,7 @@ module.exports = {
           blue: "#2e319e",
           navyblue: "#0d0f59",
           green: "#47a835",
+          purple: "#b428a4",
           orange: "#fd7832"
         }
       },
@@ -33,6 +34,14 @@ module.exports = {
         purple: "#b428a4",
         yellow: "#ffc800"
       },
+      spacing: {
+        "m-15": "-15px",
+        "m-53": "-53px",
+        sm: "8px",
+        md: "16px",
+        lg: "24px",
+        xl: "48px"
+      },
       width: {
         "1/7": "14.2857143%",
         "2/7": "28.5714286%",
@@ -41,7 +50,10 @@ module.exports = {
         "5/7": "71.4285714%",
         "6/7": "85.7142857%",
         "32": "32%",
-        "47": "47%"
+        "47": "47%",
+        "190px": "190px",
+        "200px": "200px",
+        "250px": "250px"
       }
     },
     minHeight: {
@@ -51,6 +63,15 @@ module.exports = {
       "3/4": "75%",
       "90": "93%",
       full: "100%"
+    },
+    minWidth: {
+      "0": "0",
+      "1/4": "25%",
+      "1/2": "50%",
+      "3/4": "75%",
+      full: "100%",
+      "200px": "200px",
+      "250px": "250px"
     },
     boxShadow: {
       red:
@@ -97,7 +118,10 @@ module.exports = {
     }
   },
   variants: {
-    extend: {}
+    extend: {
+      padding: ["hover"],
+      height: ["hover"]
+    }
   },
   plugins: []
 };

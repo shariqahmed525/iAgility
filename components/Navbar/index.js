@@ -21,7 +21,11 @@ const Navbar = () => {
       >
         {/* Logo */}
         <a href="#" className="py-2 items-center">
-          <img src={require("../../assets/images/logo.svg")} alt="logo" />
+          <img
+            className="w-10/12 lg:w-full"
+            src={require("../../assets/images/logo.svg")}
+            alt="logo"
+          />
         </a>
 
         {/* Menu Icon */}
@@ -39,7 +43,7 @@ const Navbar = () => {
       >
         {/* left navbar */}
         <ul className="lg:flex items-center flex-wrap">
-          <li className="lg:px-4 py-3 lg:py-2 lg:border-b-0 border-b border-solid border-gray-200">
+          {/* <li className="lg:px-4 py-3 lg:py-2 lg:border-b-0 border-b border-solid border-gray-200">
             <a
               href="#"
               className="lg:px-0 px-10 text-sm text-center font-semibold"
@@ -54,13 +58,13 @@ const Navbar = () => {
             >
               Browse Talents
             </a>
-          </li>
+          </li> */}
           <li className="lg:px-4 py-3 lg:py-2 lg:border-b-0 border-b border-solid border-gray-200">
             <a
               href="#"
               className="lg:px-0 px-10 text-sm text-center font-light"
             >
-              Why iAgility?
+              Why
             </a>
           </li>
           <li className="lg:px-4 py-3 lg:py-2 lg:border-b-0 border-b border-solid border-gray-200">
@@ -68,7 +72,7 @@ const Navbar = () => {
               href="#"
               className="lg:px-0 px-10 text-sm text-center font-light"
             >
-              Industry
+              Talent
             </a>
           </li>
           <li className="lg:px-4 py-3 lg:py-2 lg:border-b-0 border-b border-solid border-gray-200">
@@ -76,7 +80,7 @@ const Navbar = () => {
               href="#"
               className="lg:px-0 px-10 text-sm text-center font-light"
             >
-              Services
+              Insights
             </a>
           </li>
           <li className="lg:px-4 py-3 lg:py-2 lg:border-b-0 border-b border-solid border-gray-200">
@@ -84,7 +88,7 @@ const Navbar = () => {
               href="#"
               className="lg:px-0 px-10 text-sm text-center font-light"
             >
-              Pricing
+              About Us
             </a>
           </li>
         </ul>
@@ -94,28 +98,20 @@ const Navbar = () => {
           <li className="lg:px-4 py-3 lg:py-2 lg:border-b-0 border-b border-solid border-gray-200">
             <a
               href="#"
-              className="lg:px-0 px-10 text-sm text-center font-light"
-            >
-              Who is iAgility
-            </a>
-          </li>
-          <li className="lg:px-4 py-3 lg:py-2 lg:border-b-0 border-b border-solid border-gray-200">
-            <a
-              href="#"
-              className="lg:px-0 px-10 text-sm text-center font-light"
-            >
-              Support
-            </a>
-          </li>
-          <li className="lg:px-4 py-3 lg:py-2 lg:border-b-0 border-b border-solid border-gray-200">
-            <a
-              href="#"
               className="lg:px-0 px-10 text-sm text-center font-medium text-red"
+            >
+              Book an iAgilian!
+            </a>
+          </li>
+          <li className="lg:px-2 py-5 lg:py-2 lg:border-b-0 border-b border-solid border-gray-200">
+            <a
+              href="#"
+              className="lg:mx-0 mx-8 text-sm font-medium text-center text-white bg-theme shadow-theme rounded-full py-3 px-7"
             >
               Login
             </a>
           </li>
-          <li className="lg:px-4 py-3 lg:py-2 mt-2">
+          <li className="lg:px-2 py-5 lg:py-2 ">
             <a
               href="#"
               className="lg:mx-0 mx-8 text-sm font-medium text-center text-white bg-theme-red shadow-red rounded-full py-3 px-7"

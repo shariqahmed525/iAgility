@@ -4,17 +4,19 @@ import styles from "../styles/Home.module.css";
 import { BiPlay } from "react-icons/bi";
 import { RiUser2Line } from "react-icons/ri";
 import { AiOutlineLaptop } from "react-icons/ai";
-import { HiOutlineLightBulb } from "react-icons/hi";
+import { HiArrowRight, HiOutlineLightBulb } from "react-icons/hi";
 import { FiArrowLeft, FiArrowRight, FiChevronRight } from "react-icons/fi";
 import {
-  AgilityBox,
-  BannerQuote,
-  IAgilityWorkBox,
   Navbar,
+  Button,
+  UserCard,
   Reviewer,
   ThreeDots,
-  UserCard,
-  WhyChooseBox
+  AgilityBox,
+  BannerQuote,
+  WhyChooseBox,
+  WhatCanDoBox,
+  IAgilityWorkBox
 } from "../components";
 
 const iAgilityBoxes = [
@@ -112,6 +114,59 @@ const WhyChooseIAgilityBoxes = [
     theme: "purple",
     text:
       "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique, adipisci reiciendis.Earum alias voluptatibus harum iusto eius consequatur delectus aliquid totam."
+  }
+];
+
+const WhatCanDoBoxes = [
+  {
+    name: "Business Intelligence & Analytics",
+    theme: "green",
+    img: require("../assets/images/money-finance.svg")
+  },
+  {
+    name: "Digital Transformation",
+    theme: "yellow",
+    img: require("../assets/images/digital-transformation.svg")
+  },
+  {
+    name: "Program Managemnet Office (PMO)",
+    theme: "orange",
+    img: require("../assets/images/project-management.svg")
+  },
+  {
+    name: "Program Management",
+    theme: "purple",
+    img: require("../assets/images/artificial-intelligence.svg")
+  }
+];
+
+const BlogBoxes = [
+  {
+    name: "Lorem ipsum dolor sit amet dolor sit amet",
+    text:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis facilis dolores libero nulla culpa enim totam officia placeat Nobis facilis dolores libero nulla culpa enim totam officia placeat",
+    date: "10",
+    month: "Nov",
+    year: "2020",
+    img: require("../assets/images/blog.jpg")
+  },
+  {
+    name: "Lorem ipsum dolor sit amet dolor sit amet",
+    text:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis facilis dolores libero nulla culpa enim totam officia placeat Nobis facilis dolores libero nulla culpa enim totam officia placeat",
+    date: "10",
+    month: "Nov",
+    year: "2020",
+    img: require("../assets/images/blog.jpg")
+  },
+  {
+    name: "Lorem ipsum dolor sit amet dolor sit amet",
+    text:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis facilis dolores libero nulla culpa enim totam officia placeat Nobis facilis dolores libero nulla culpa enim totam officia placeat",
+    date: "10",
+    month: "Nov",
+    year: "2020",
+    img: require("../assets/images/blog.jpg")
   }
 ];
 
@@ -348,13 +403,9 @@ const AreYouLooking = () => {
       <p className="text-xl text-white font-medium max-w-xs text-center lg:text-right">
         Are you looking to provide services and become an iAgility?
       </p>
-      <a
-        href="#"
-        className="text-sm mt-5 lg:mt-0 w-36 ml-0 lg:ml-3 font-medium text-center text-white bg-theme-red shadow-red rounded-full py-3 px-4 flex justify-between items-center"
-      >
-        <span className="flex flex-1 justify-center">Learn More</span>
-        <FiChevronRight />
-      </a>
+      <span className="mt-5 lg:mt-0 ml-0 lg:ml-3">
+        <Button text="Learn More" />
+      </span>
     </div>
   );
 };
@@ -426,6 +477,198 @@ const ClientsFeedBack = () => {
   );
 };
 
+const WhyChooseIAgility = () => {
+  return (
+    <div className="py-16 px-5 lg:px-16 grid grid-cols-12 gap-4">
+      <div className="col-start-1 col-span-12 lg:col-start-3 lg:col-span-8 flex flex-col-reverse 2xl:flex-row items-center justify-between">
+        <div
+          className="w-full xl:w-47 lg:w-6/7 sm:w-5/7 py-10 flex flex-col sm:flex-row justify-center items-center pl-lg md:pl-xl"
+          style={{
+            backgroundImage:
+              "url(" + require("../assets/images/Union.svg") + ")",
+            backgroundSize: "contain",
+            backgroundRepeat: "no-repeat"
+          }}
+        >
+          <div className="flex w-full sm:w-auto flex-col mx-2 justify-center">
+            {WhyChooseIAgilityBoxes.slice(0, 3).map((v, i) => (
+              <WhyChooseBox key={i} {...v} />
+            ))}
+          </div>
+          <div className="flex w-full sm:w-auto flex-col mx-2 justify-center">
+            {WhyChooseIAgilityBoxes.slice(3, 5).map((v, i) => (
+              <WhyChooseBox key={i} {...v} />
+            ))}
+          </div>
+        </div>
+        <div className="w-full 2xl:w-47 lg:w-6/7 sm:w-5/7 pt-10 pl-0 lg:pl-xl">
+          <div className="flex justify-center 2xl:justify-start">
+            <img
+              src={require("../assets/images/logo-upperside-light.svg")}
+              alt="logo-upper"
+            />
+          </div>
+          <p className="text-navyblue font-bold text-4xl xl:text-5xl text-center 2xl:text-left py-3">
+            Why Choose <span className="text-theme">iAgility</span> Over Other
+            Platform?
+          </p>
+          <p className="py-3 font-light text-center 2xl:text-left">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis
+            non nesciunt esse beatae asperiores. Provident eaque dolorem
+            architecto quasi sed ratione consequatur porro? Sit ipsum illum
+            dolorem similique voluptate magni{" "}
+            <a href="#" className="text-theme font-semibold">
+              your own personalized dashboard with ease!
+            </a>
+          </p>
+          <div className="flex justify-center 2xl:justify-start py-4">
+            <Button text="Learn More" />
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const WhatCanAnIAgilian = () => {
+  return (
+    <div className="py-16 px-5 lg:px-16 grid grid-cols-12 gap-4 bg-theme">
+      <div className="col-start-1 col-span-12 lg:col-start-3 lg:col-span-8 flex flex-col items-center">
+        <img
+          src={require("../assets/images/logo-upperside.svg")}
+          alt="logo-upper"
+        />
+        <p className="text-white font-bold max-w-sm text-4xl text-center pt-5 pb-3">
+          What Can An iAgilian Do For You?
+        </p>
+        <p className="text-white py-3 font-light text-center max-w-2xl lg:max-w-4xl">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. dolorem
+          architecto quasi sed ratione consequatur porro? Sit ipsum illum
+          dolorem similique voluptate magni ratione consequatur porro? Sit ipsum
+          illum dolorem similique voluptate magni{" "}
+          <a href="#" className="text-white font-semibold">
+            your own personalized dashboard with ease!
+          </a>
+        </p>
+      </div>
+      <div className="col-start-1 col-span-12 lg:col-start-3 lg:col-span-8 flex gap-4 mt-5 justify-between overflow-auto hide-scroll py-4 pl-4">
+        {WhatCanDoBoxes.map((v, i) => (
+          <WhatCanDoBox {...v} index={i} key={i} />
+        ))}
+        <a href="#" className="hidden md:inline-block">
+          <div
+            className={`
+                  p-5 shadow-xl 
+                  bg-theme-red rounded-3xl
+                  h-44
+                  flex
+                  flex-col
+                  items-center
+                  justify-around
+                  mr-4
+                  w-190px
+                `}
+            style={{ minWidth: 190 }}
+          >
+            <p className="text-center text-lg font-semibold text-white">
+              Other Technology Servcies
+            </p>
+            <HiArrowRight className="text-white text-xl" />
+          </div>
+        </a>
+      </div>
+      <div className="col-start-1 col-span-12 flex md:hidden justify-center items-center">
+        <Button text="Create Your First Project" />
+      </div>
+    </div>
+  );
+};
+
+const CalendarSection = () => {
+  return (
+    <div className="py-10 px-5 lg:px-16 grid grid-cols-12 gap-4 bg-theme bg-opacity-10">
+      <div className="col-start-1 col-span-12 lg:col-start-3 lg:col-span-8 flex flex-col lg:flex-row items-center justify-center">
+        <div className="w-full 2xl:w-47 lg:w-6/7 sm:w-5/7 pt-10 flex flex-col items-center lg:items-start">
+          <p className="text-navyblue font-bold text-4xl xl:text-5xl max-w-lg lg:max-w-md text-center lg:text-left py-3">
+            Need a Different Kind of{" "}
+            <span className="text-theme">Consultant</span>?
+          </p>
+          <p className="py-3 font-light text-center max-w-lg lg:max-w-md lg:text-left">
+            Talk to us, we'll find the perfect consultant for your business
+          </p>
+          <div className="flex justify-center 2xl:justify-start py-4">
+            <Button text="Schedule an Appointment" />
+          </div>
+        </div>
+        <div
+          className="w-full 2xl:w-47 lg:w-6/7 sm:w-5/7 pt-10 pl-lg md:pl-xl"
+          style={{
+            backgroundImage:
+              "url(" + require("../assets/images/Union-50.svg") + ")",
+            backgroundSize: "contain",
+            backgroundRepeat: "no-repeat"
+          }}
+        >
+          <img alt="" src={require("../assets/images/calendar-high.jpg")} />
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const BlogSection = () => {
+  return (
+    <div className="py-16 px-5 lg:px-16 grid grid-cols-12 gap-4">
+      <div className="col-start-1 col-span-12 lg:col-start-3 lg:col-span-8 flex flex-col items-center">
+        <img
+          src={require("../assets/images/logo-upperside.svg")}
+          alt="logo-upper"
+        />
+        <p className="text-navyblue font-bold text-4xl text-center py-3">
+          Recent <span className="text-theme">Blog</span> Post
+        </p>
+      </div>
+      <div className="col-start-1 col-span-12 xl:col-start-3 xl:col-span-8 gap-4 flex flex-1 flex-col lg:flex-row items-center justify-between">
+        {BlogBoxes.map((v, i) => (
+          <div
+            key={i}
+            className={`w-full sm:w-1/2 flex flex-row lg:flex-col justify-between lg:p-8 bg-white shadow-xl h-40 lg:h-auto rounded-3xl my-1 lg:my-2`}
+          >
+            <img
+              src={v.img}
+              className="w-1/3 sm:w-3/7 lg:w-full rounded-l-3xl lg:rounded-3xl max-h-48 object-cover"
+              alt=""
+            />
+            <div className="p-4 lg:p-0 justify-start">
+              <p
+                className="
+                      w-36 lg:mt-m-15 lg:mb-2 mx-0 lg:mx-auto text-left lg:text-center font-semibold bg-white py-1 px-0 text-sm font-light rounded-full
+                    "
+              >
+                <span className="text-theme">{v.date}</span> {v.month}, {v.year}
+              </p>
+              <p className="font-bold text-xl text-navyblue text-base py-1">
+                {v.name}
+              </p>
+            </div>
+            <p className="hidden lg:inline-flex font-light text-gray-500 text-sm py-1">
+              {v.text}
+            </p>
+            <p className="hidden relative w-full lg:flex justify-center">
+              <div className="w-11 h-11 shadow-theme bg-theme rounded-full mx-auto flex justify-center items-center absolute bottom-0 mb-m-53">
+                <HiArrowRight className="text-white text-xl" />
+              </div>
+            </p>
+          </div>
+        ))}
+      </div>
+      <div className="col-start-1 col-span-12 md:col-start-3 md:col-span-8 flex items-center justify-center my-4 md:my-7">
+        <Button text="More Posts" transparent />
+      </div>
+    </div>
+  );
+};
+
 const Home = () => {
   return (
     <div className={styles.container}>
@@ -435,6 +678,7 @@ const Home = () => {
       </Head>
       <div className="bg-white pb-20">
         <Navbar />
+
         {/* Banner Section */}
         <BannerSection />
 
@@ -451,45 +695,16 @@ const Home = () => {
         <ClientsFeedBack />
 
         {/* Why Choose iAgility? Section */}
-        <div className="py-16 px-5 lg:px-16 grid grid-cols-12 gap-4">
-          <div className="col-start-1 col-span-12 lg:col-start-3 lg:col-span-8 flex flex-col-reverse 2xl:flex-row items-center justify-between">
-            <div
-              className="w-full xl:w-47 lg:w-6/7 sm:w-5/7 py-10 flex flex-col sm:flex-row justify-center items-center"
-              style={{
-                backgroundImage:
-                  "url(" + require("../assets/images/Union.svg") + ")",
-                backgroundSize: "contain",
-                backgroundRepeat: "no-repeat"
-              }}
-            >
-              <div className="flex w-full sm:w-auto flex-col mx-2 justify-center">
-                {WhyChooseIAgilityBoxes.slice(0, 3).map((v, i) => (
-                  <WhyChooseBox key={i} {...v} />
-                ))}
-              </div>
-              <div className="flex w-full sm:w-auto flex-col mx-2 justify-center">
-                {WhyChooseIAgilityBoxes.slice(3, 5).map((v, i) => (
-                  <WhyChooseBox key={i} {...v} />
-                ))}
-              </div>
-            </div>
-            <div className="w-full 2xl:w-47 lg:w-6/7 sm:w-5/7 pt-10">
-              <p className="text-navyblue font-bold text-4xl xl:text-5xl text-center 2xl:text-left py-3">
-                Why Choose <span className="text-theme">iAgility</span> Over
-                Other Platform?
-              </p>
-              <p className="py-3 font-light text-center 2xl:text-left">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Reiciendis non nesciunt esse beatae asperiores. Provident eaque
-                dolorem architecto quasi sed ratione consequatur porro? Sit
-                ipsum illum dolorem similique voluptate magni{" "}
-                <a href="#" className="text-theme font-semibold">
-                  your own personalized dashboard with ease!
-                </a>
-              </p>
-            </div>
-          </div>
-        </div>
+        <WhyChooseIAgility />
+
+        {/* What can an iAgilian? Section  */}
+        <WhatCanAnIAgilian />
+
+        {/* Calendar Section */}
+        <CalendarSection />
+
+        {/* Blog Section */}
+        <BlogSection />
       </div>
     </div>
   );
