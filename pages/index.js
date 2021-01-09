@@ -9,6 +9,7 @@ import { FiArrowLeft, FiArrowRight, FiChevronRight } from "react-icons/fi";
 import {
   Navbar,
   Button,
+  BlogBox,
   UserCard,
   Reviewer,
   ThreeDots,
@@ -16,7 +17,8 @@ import {
   BannerQuote,
   WhyChooseBox,
   WhatCanDoBox,
-  IAgilityWorkBox
+  IAgilityWorkBox,
+  Footer
 } from "../components";
 
 const iAgilityBoxes = [
@@ -558,16 +560,16 @@ const WhatCanAnIAgilian = () => {
         <a href="#" className="hidden md:inline-block">
           <div
             className={`
-                  p-5 shadow-xl 
-                  bg-theme-red rounded-3xl
-                  h-44
-                  flex
-                  flex-col
-                  items-center
-                  justify-around
-                  mr-4
-                  w-190px
-                `}
+              p-5 shadow-xl 
+              bg-theme-red rounded-3xl
+              h-44
+              flex
+              flex-col
+              items-center
+              justify-around
+              mr-4
+              w-190px
+            `}
             style={{ minWidth: 190 }}
           >
             <p className="text-center text-lg font-semibold text-white">
@@ -630,36 +632,7 @@ const BlogSection = () => {
       </div>
       <div className="col-start-1 col-span-12 xl:col-start-3 xl:col-span-8 gap-4 flex flex-1 flex-col lg:flex-row items-center justify-between">
         {BlogBoxes.map((v, i) => (
-          <div
-            key={i}
-            className={`w-full sm:w-1/2 flex flex-row lg:flex-col justify-between lg:p-8 bg-white shadow-xl h-40 lg:h-auto rounded-3xl my-1 lg:my-2`}
-          >
-            <img
-              src={v.img}
-              className="w-1/3 sm:w-3/7 lg:w-full rounded-l-3xl lg:rounded-3xl max-h-48 object-cover"
-              alt=""
-            />
-            <div className="p-4 lg:p-0 justify-start">
-              <p
-                className="
-                      w-36 lg:mt-m-15 lg:mb-2 mx-0 lg:mx-auto text-left lg:text-center font-semibold bg-white py-1 px-0 text-sm font-light rounded-full
-                    "
-              >
-                <span className="text-theme">{v.date}</span> {v.month}, {v.year}
-              </p>
-              <p className="font-bold text-xl text-navyblue text-base py-1">
-                {v.name}
-              </p>
-            </div>
-            <p className="hidden lg:inline-flex font-light text-gray-500 text-sm py-1">
-              {v.text}
-            </p>
-            <p className="hidden relative w-full lg:flex justify-center">
-              <div className="w-11 h-11 shadow-theme bg-theme rounded-full mx-auto flex justify-center items-center absolute bottom-0 mb-m-53">
-                <HiArrowRight className="text-white text-xl" />
-              </div>
-            </p>
-          </div>
+          <BlogBox key={i} {...v} />
         ))}
       </div>
       <div className="col-start-1 col-span-12 md:col-start-3 md:col-span-8 flex items-center justify-center my-4 md:my-7">
@@ -676,7 +649,7 @@ const Home = () => {
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="bg-white pb-20">
+      <div className="bg-white">
         <Navbar />
 
         {/* Banner Section */}
@@ -705,6 +678,9 @@ const Home = () => {
 
         {/* Blog Section */}
         <BlogSection />
+
+        {/* Footer */}
+        <Footer />
       </div>
     </div>
   );

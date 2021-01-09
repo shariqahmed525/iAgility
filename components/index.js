@@ -1,5 +1,7 @@
 import Navbar from "./Navbar";
+import Footer from "./Footer";
 import Button from "./Button";
+import BlogBox from "./BlogBox";
 import Reviewer from "./Reviewer";
 import UserCard from "./UserCard";
 import ThreeDots from "./ThreeDots";
@@ -12,6 +14,8 @@ import IAgilityWorkBox from "./IAgilityWorkBox";
 export {
   Navbar,
   Button,
+  Footer,
+  BlogBox,
   Reviewer,
   UserCard,
   ThreeDots,

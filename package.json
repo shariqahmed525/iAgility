@@ -8,6 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@material/react-text-field": "^0.15.0",
     "autoprefixer": "^10.1.0",
     "next": "10.0.4",
     "next-images": "^1.6.2",
