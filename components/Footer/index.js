@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { ImFacebook } from "react-icons/im";
 import { CgTwitter } from "react-icons/cg";
 import { SiInstagram } from "react-icons/si";
@@ -17,6 +17,7 @@ const socialIcons = [
 ];
 
 const Footer = () => {
+  const [text, setText] = useState("");
   return (
     <div className="py-5 lg:py-0  px-5 lg:px-16 grid grid-cols-12 bg-theme-navyblue">
       <div className="col-start-1 col-span-12 2xl:col-start-3 2xl:col-span-8 xl:col-start-2 xl:col-span-10 gap-4 flex flex-col lg:flex-row justify-between xl:justify-around items-center lg:items-start my-4">
@@ -65,10 +66,9 @@ const Footer = () => {
                 }}
               >
                 <Input
+                  value={text}
                   className="text-white"
-                  // onChange={e =>
-                  //   this.setState({ value: e.currentTarget.value })
-                  // }
+                  onChange={e => setText(e.currentTarget.value)}
                 />
               </TextField>
             </div>

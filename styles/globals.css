@@ -44,7 +44,17 @@ a {
 }
 
 .mdc-text-field .mdc-line-ripple {
-  background-color: #9ca3af !important;
+  background-color: #ffffff !important;
+}
+
+.mdc-text-field__input {
+  border-width: 2px !important;
+  border-color: #cdd5dd !important;
+  padding-left: 5px !important;
+}
+
+.mdc-text-field:not(.mdc-text-field--disabled) .mdc-text-field__input {
+  color: #1daeef !important;
 }
 
 .top-nav {
