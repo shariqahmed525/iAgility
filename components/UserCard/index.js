@@ -3,7 +3,7 @@ import { ThreeDots } from "..";
 
 const UserCard = ({ name, expertise, img }) => {
   return (
-    <div className="flex flex-col justify-center items-center shadow-xl py-5 px-5 sm:px-10 m-1.5 rounded-2xl">
+    <div className="flex flex-col justify-center bg-white items-center shadow-xl py-5 px-5 sm:px-10 m-1.5 rounded-2xl">
       <img
         alt="Loading failed..."
         className="rounded-full h-20 w-20 sm:h-24 sm:w-24 shadow-2xl"

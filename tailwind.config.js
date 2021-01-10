@@ -18,6 +18,7 @@ module.exports = {
           mediumblue: "#161865",
           green: "#47a835",
           purple: "#b428a4",
+          lightblue: "#eaf7ff",
           orange: "#fd7832"
         }
       },

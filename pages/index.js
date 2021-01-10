@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Head from "next/head";
-import styles from "../styles/Home.module.css";
 import { BiPlay } from "react-icons/bi";
 import { RiUser2Line } from "react-icons/ri";
 import { AiOutlineLaptop } from "react-icons/ai";
@@ -9,6 +8,7 @@ import { FiArrowLeft, FiArrowRight, FiChevronRight } from "react-icons/fi";
 import {
   Navbar,
   Button,
+  Footer,
   BlogBox,
   UserCard,
   Reviewer,
@@ -17,8 +17,7 @@ import {
   BannerQuote,
   WhyChooseBox,
   WhatCanDoBox,
-  IAgilityWorkBox,
-  Footer
+  IAgilityWorkBox
 } from "../components";
 
 const iAgilityBoxes = [
@@ -31,7 +30,7 @@ const iAgilityBoxes = [
         }`}
       />
     ),
-    img: require("../assets/images/table.jpg")
+    img: require("../assets/images/adviser-img.jpg")
   },
   {
     name: "Online Consulting Platform",
@@ -42,7 +41,7 @@ const iAgilityBoxes = [
         }`}
       />
     ),
-    img: require("../assets/images/adviser-img.jpg")
+    img: require("../assets/images/new-table.jpg")
   },
   {
     name: "Relationship Building",
@@ -174,7 +173,7 @@ const BlogBoxes = [
 
 const BannerSection = () => {
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-2 px-5 lg:px-16">
+    <div className="grid grid-cols-1 lg:grid-cols-2 px-5 lg:px-16 banner-bg">
       <div className="grid justify-center lg:justify-end pt-10 pb-3 lg:pt-32">
         <div>
           {/* Text Section */}
@@ -205,7 +204,7 @@ const BannerSection = () => {
           </div>
         </div>
       </div>
-      <div className="flex justify-center py-1 lg:pt-32">
+      <div className="flex justify-center py-1 lg:pt-32 banner-dotted-design">
         <div>
           <UserCard name="Mohammad Adnan" expertise="Finance Expert" />
           <UserCard name="Mohammad Adnan" expertise="Finance Expert" />
@@ -224,7 +223,19 @@ const BannerSection = () => {
 };
 
 const WhatIsiAgility = () => {
-  const [active, setActive] = useState(0);
+  const [active, setActive] = useState(1);
+
+  const handleActions = action => {
+    if (action === "+") {
+      active === iAgilityBoxes.length - 1
+        ? setActive(0)
+        : setActive(active + 1);
+    } else {
+      active === 0
+        ? setActive(iAgilityBoxes.length - 1)
+        : setActive(active - 1);
+    }
+  };
 
   const iAgilityText = () => {
     return (
@@ -249,15 +260,7 @@ const WhatIsiAgility = () => {
           </span>
         </p>
         <div className="flex flex-col xl:flex-row items-center pt-5">
-          <a
-            href="#"
-            className="text-sm mt-2 mx-auto lg:mx-0 w-52 font-medium text-center text-white bg-theme-red shadow-red rounded-full py-3 px-4 flex justify-between items-center"
-          >
-            <span className="flex flex-1 justify-center">
-              Contact iAgility Today
-            </span>
-            <FiChevronRight />
-          </a>
+          <Button text="Contact iAgility Today" />
           <a
             href="#"
             className="text-sm mt-2 mx-auto lg:mx-0 w-36 font-medium text-center text-red rounded-full py-3 px-4 flex justify-between items-center"
@@ -270,25 +273,28 @@ const WhatIsiAgility = () => {
     );
   };
 
-  const iAgilityActions = arrow => {
+  const iAgilityActions = (arrow, handler) => {
     return (
-      <a href="#">
-        <div className={"flex md:hidden flex-row justify-content items-center"}>
-          <div
-            className={
-              "w-16 h-16 bg-theme border border-theme shadow-theme border-opacity-75 rounded-full flex items-center justify-center"
-            }
-            style={{ minWidth: "3.5rem" }}
-          >
-            {arrow}
-          </div>
+      <div
+        onClick={handler}
+        className={
+          "flex md:hidden flex-row justify-content items-center cursor-pointer"
+        }
+      >
+        <div
+          className={
+            "w-16 h-16 bg-theme border border-theme shadow-theme border-opacity-75 rounded-full flex items-center justify-center"
+          }
+          style={{ minWidth: "3.5rem" }}
+        >
+          {arrow}
         </div>
-      </a>
+      </div>
     );
   };
 
   return (
-    <>
+    <div className="what-is-dotted-design">
       <div className="py-10 px-5 lg:px-16 grid grid-cols-12 gap-4">
         <div className="col-start-1 col-span-12 lg:col-start-3 lg:col-span-8 flex flex-col items-center">
           <img
@@ -311,7 +317,10 @@ const WhatIsiAgility = () => {
       <div className="px-5 lg:px-16 grid grid-cols-12 gap-4">
         <div className="col-start-1 col-span-12 xl:col-start-3 xl:col-span-8 flex flex-col items-center pt-1">
           <div className="w-full flex items-center justify-between">
-            {iAgilityActions(<FiArrowLeft className="text-white text-2xl" />)}
+            {iAgilityActions(
+              <FiArrowLeft className="text-white text-2xl" />,
+              () => handleActions("-")
+            )}
             <div className="flex border-t-2 border-theme border-opacity-50 border-dotted flex-1 md:hidden"></div>
             {iAgilityBoxes.map((v, i) => {
               return (
@@ -325,7 +334,10 @@ const WhatIsiAgility = () => {
               );
             })}
             <div className="flex border-t-2 border-theme border-opacity-50 border-dotted flex-1 md:hidden"></div>
-            {iAgilityActions(<FiArrowRight className="text-white text-2xl" />)}
+            {iAgilityActions(
+              <FiArrowRight className="text-white text-2xl" />,
+              () => handleActions("+")
+            )}
           </div>
         </div>
       </div>
@@ -347,7 +359,7 @@ const WhatIsiAgility = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
@@ -355,7 +367,7 @@ const HowDoesIAgility = () => {
   const [active, setActive] = useState(0);
 
   return (
-    <div className="py-16 px-5 lg:px-16 grid grid-cols-12 gap-4 bg-theme bg-opacity-5">
+    <div className="py-16 px-5 lg:px-16 grid grid-cols-12 gap-4 bg-theme bg-opacity-5 how-does-dotted-design">
       <div className="col-start-1 col-span-12 lg:col-start-3 lg:col-span-8 flex flex-col items-center">
         <img
           src={require("../assets/images/logo-upperside.svg")}
@@ -414,7 +426,7 @@ const AreYouLooking = () => {
 
 const ClientsFeedBack = () => {
   return (
-    <div className="py-16 px-5 lg:px-16 grid grid-cols-12 gap-4 bg-theme bg-opacity-5">
+    <div className="py-16 px-5 lg:px-16 grid grid-cols-12 gap-4 bg-theme-lightblue our-client-dotted-design">
       <div className="col-start-1 col-span-12 lg:col-start-3 lg:col-span-8">
         <p className="text-2xl lg:text-3xl text-navyblue font-bold text-center py-3">
           Our Client's Feedback
@@ -482,17 +494,9 @@ const ClientsFeedBack = () => {
 
 const WhyChooseIAgility = () => {
   return (
-    <div className="py-16 px-5 lg:px-16 grid grid-cols-12 gap-4">
+    <div className="py-16 px-5 lg:px-16 grid grid-cols-12 gap-4 why-choose-dotted-design">
       <div className="col-start-1 col-span-12 lg:col-start-3 lg:col-span-8 flex flex-col-reverse 2xl:flex-row items-center justify-between">
-        <div
-          className="w-full xl:w-47 lg:w-6/7 sm:w-5/7 py-10 flex flex-col sm:flex-row justify-center items-center pl-lg md:pl-xl"
-          style={{
-            backgroundImage:
-              "url(" + require("../assets/images/Union.svg") + ")",
-            backgroundSize: "contain",
-            backgroundRepeat: "no-repeat"
-          }}
-        >
+        <div className="py-10 flex flex-col sm:flex-row justify-center items-center pl-lg md:pl-xl why-choose-solid-design">
           <div className="flex w-full sm:w-auto flex-col mx-2 justify-center">
             {WhyChooseIAgilityBoxes.slice(0, 3).map((v, i) => (
               <WhyChooseBox key={i} {...v} />
@@ -589,7 +593,7 @@ const WhatCanAnIAgilian = () => {
 
 const CalendarSection = () => {
   return (
-    <div className="py-10 px-5 lg:px-16 grid grid-cols-12 gap-4 bg-theme bg-opacity-10">
+    <div className="py-10 px-5 lg:px-16 grid grid-cols-12 gap-4 bg-theme-lightblue">
       <div className="col-start-1 col-span-12 lg:col-start-3 lg:col-span-8 flex flex-col lg:flex-row items-center justify-center">
         <div className="w-full 2xl:w-47 lg:w-6/7 sm:w-5/7 pt-10 flex flex-col items-center lg:items-start">
           <p className="text-navyblue font-bold text-4xl xl:text-5xl max-w-lg lg:max-w-md text-center lg:text-left py-3">
@@ -603,15 +607,7 @@ const CalendarSection = () => {
             <Button text="Schedule an Appointment" />
           </div>
         </div>
-        <div
-          className="w-full 2xl:w-47 lg:w-6/7 sm:w-5/7 pt-10 pl-lg md:pl-xl"
-          style={{
-            backgroundImage:
-              "url(" + require("../assets/images/Union-50.svg") + ")",
-            backgroundSize: "auto",
-            backgroundRepeat: "no-repeat"
-          }}
-        >
+        <div className="w-full 2xl:w-47 lg:w-6/7 sm:w-5/7 pt-10 pl-lg md:pl-xl calendar-dotted-design">
           <img alt="" src={require("../assets/images/calendar.png")} />
         </div>
       </div>
@@ -645,44 +641,44 @@ const BlogSection = () => {
 
 const Home = () => {
   return (
-    <div className={styles.container}>
+    <div className="bg-white overflow-hidden">
       <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>Micro Aility</title>
+        <link rel="icon" href={require("../assets/images/logo-white.svg")} />
       </Head>
-      <div className="bg-white overflow-hidden">
-        <Navbar />
+      <Navbar />
 
+      <div className="page-banner">
         {/* Banner Section */}
         <BannerSection />
 
         {/* What Is iAgility? Section */}
         <WhatIsiAgility />
-
-        {/* How Does IAgility? Work Section */}
-        <HowDoesIAgility />
-
-        {/* Are you looking? Section */}
-        <AreYouLooking />
-
-        {/* Our Clients Feedback Section */}
-        <ClientsFeedBack />
-
-        {/* Why Choose iAgility? Section */}
-        <WhyChooseIAgility />
-
-        {/* What can an iAgilian? Section  */}
-        <WhatCanAnIAgilian />
-
-        {/* Calendar Section */}
-        <CalendarSection />
-
-        {/* Blog Section */}
-        <BlogSection />
-
-        {/* Footer */}
-        <Footer />
       </div>
+
+      {/* How Does IAgility? Work Section */}
+      <HowDoesIAgility />
+
+      {/* Are you looking? Section */}
+      <AreYouLooking />
+
+      {/* Our Clients Feedback Section */}
+      <ClientsFeedBack />
+
+      {/* Why Choose iAgility? Section */}
+      <WhyChooseIAgility />
+
+      {/* What can an iAgilian? Section  */}
+      <WhatCanAnIAgilian />
+
+      {/* Calendar Section */}
+      <CalendarSection />
+
+      {/* Blog Section */}
+      <BlogSection />
+
+      {/* Footer */}
+      <Footer />
     </div>
   );
 };

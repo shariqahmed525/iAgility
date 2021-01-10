@@ -38,8 +38,9 @@ const Footer = () => {
             support@iAgility.com
           </p>
           <div className="flex w-full lg:hidden justify-center items-center mt-8 mb-5">
-            {socialIcons.map(v => (
+            {socialIcons.map((v, i) => (
               <a
+                key={i}
                 href="#"
                 className="w-14 h-14 rounded-full bg-theme-mediumblue flex justify-center items-center mx-1 shadow-xl"
               >

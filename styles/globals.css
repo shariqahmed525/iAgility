@@ -62,10 +62,73 @@ a {
   padding-left: 9rem !important;
 }
 
-@media (max-width: 1400px) {
-  .top-nav {
-    padding-left: 2.5rem !important;
-  }
+.page-banner {
+  background-image: url("../assets/images/banner-bg.svg");
+  background-size: 1400px;
+  background-repeat: no-repeat;
+  background-position-x: calc(100% + 640px);
+  background-position-y: -300px;
+}
+
+.banner-bg {
+  background-image: url("../assets/images/small-dotted-circle.svg");
+  background-size: 600px;
+  background-repeat: no-repeat;
+  background-position-x: -300px;
+  background-position-y: center;
+}
+
+.banner-dotted-design {
+  background-image: url("../assets/images/medium-dotted-circle.svg");
+  background-size: 400px;
+  background-repeat: no-repeat;
+  background-position-x: 150px;
+  background-position-y: 30px;
+}
+
+.what-is-dotted-design {
+  background-image: url("../assets/images/solid-circle.svg");
+  background-size: 700px;
+  background-repeat: no-repeat;
+  background-position-x: -450px;
+  background-position-y: top;
+}
+
+.how-does-dotted-design {
+  background-image: url("../assets/images/Path.svg");
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position-x: calc(100% + 100px);
+  background-position-y: center;
+}
+
+.our-client-dotted-design {
+  background-image: url("../assets/images/Union\ 3.svg");
+  background-size: 300px;
+  background-repeat: no-repeat;
+  background-position: 200px 20px;
+}
+
+.why-choose-dotted-design {
+  background-image: url("../assets/images/medium-dotted-circle.svg");
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position-x: calc(100% + 400px);
+  background-position-y: center;
+}
+
+.why-choose-solid-design {
+  width: 60%;
+  background-image: url("../assets/images/Union.svg");
+  background-size: auto;
+  background-repeat: no-repeat;
+}
+
+.calendar-dotted-design {
+  background-image: url("../assets/images/Union\ 3.svg");
+  background-repeat: no-repeat;
+  background-size: 400px;
+  background-position-x: -20px;
 }
 
 .what-can-an-dotted-design {
@@ -73,6 +136,7 @@ a {
   background-size: contain;
   background-repeat: no-repeat;
   background-position-x: -280px;
+  background-position-y: center;
 }
 
 .footer-dotted-design {
@@ -82,27 +146,102 @@ a {
   background-position: -399px 130px;
 }
 
-@media (max-width: 1024px) {
-  .footer-dotted-design {
-    background-image: none;
+@media (max-width: 1600px) {
+  .banner-dotted-design {
+    background-position-x: 20px;
+  }
+}
+
+@media (max-width: 1400px) {
+  .top-nav {
+    padding-left: 2.5rem !important;
+  }
+  .page-banner {
+    background-position-x: calc(100% + 740px);
+  }
+  .banner-dotted-design {
+    background-position-x: 10px;
+  }
+}
+
+@media (max-width: 1280px) {
+  .page-banner {
+    background-size: 1300px;
+    background-position-x: calc(100% + 700px);
+  }
+  .banner-dotted-design {
+    background-position-x: -20px;
+  }
+  .what-is-dotted-design {
+    background-position-x: -550px;
+  }
+  .why-choose-solid-design {
+    width: 100% !important;
+    background-size: contain;
+  }
+  .why-choose-dotted-design {
+    background-position-x: calc(100% + 500px);
   }
   .what-can-an-dotted-design {
-    background-image: none;
+    background-position-x: -350px;
   }
+  .our-client-dotted-design {
+    background-position: 0px 20px;
+  }
+  .footer-dotted-design {
+    background-position: -499px 130px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .page-banner {
+    background-size: 1200px;
+    background-position-x: calc(100% + 650px);
+    background-position-y: -200px;
+  }
+  .banner-dotted-design {
+    background-position-x: -30px;
+    background-position-y: 50px;
+  }
+}
+
+@media (max-width: 1024px) {
   .top-nav {
     padding-left: 0 !important;
+  }
+  .banner-dotted-design {
+    background-image: none;
   }
   .show-menu {
     display: block !important;
     transition: display 500ms ease-in;
   }
+  .page-banner {
+    background-position-x: calc(100% + 650px);
+    background-position-y: -100px;
+  }
+  .what-is-dotted-design {
+    background-image: none;
+  }
+  .our-client-dotted-design {
+    background-position-x: 0px;
+  }
+  .why-choose-dotted-design {
+    background-image: none;
+  }
+  .footer-dotted-design {
+    background-image: none;
+  }
 }
 
-@media (max-width: 1280px) {
-  .footer-dotted-design {
-    background-position: -499px 130px;
+@media (max-width: 640px) {
+  .calendar-dotted-design {
+    background-size: 300px;
   }
-  .what-can-an-dotted-design {
-    background-position-x: -350px;
+}
+
+@media (max-width: 480px) {
+  .page-banner {
+    background-position-y: -70px;
   }
 }
