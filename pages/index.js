@@ -449,8 +449,9 @@ const ClientsFeedBack = () => {
           className="bg-white shadow-xl rounded-3xl my-2 p-6 w-full h-56 lg:min-h-90 sm:w-80 md:w-80 relative lg:w-32"
           style={{
             backgroundImage:
-              "url(" + require("../assets/images/tutorial.jpg") + ")",
+              "url(" + require("../assets/images/tutor1.png") + ")",
             backgroundSize: "cover",
+            backgroundOrigin: "border-box",
             backgroundRepeat: "no-repeat"
           }}
         >
@@ -534,7 +535,7 @@ const WhyChooseIAgility = () => {
 
 const WhatCanAnIAgilian = () => {
   return (
-    <div className="py-16 px-5 lg:px-16 grid grid-cols-12 gap-4 bg-theme">
+    <div className="py-16 px-5 lg:px-16 grid grid-cols-12 gap-4 bg-theme what-can-an-dotted-design">
       <div className="col-start-1 col-span-12 lg:col-start-3 lg:col-span-8 flex flex-col items-center">
         <img
           src={require("../assets/images/logo-upperside.svg")}
@@ -607,11 +608,11 @@ const CalendarSection = () => {
           style={{
             backgroundImage:
               "url(" + require("../assets/images/Union-50.svg") + ")",
-            backgroundSize: "contain",
+            backgroundSize: "auto",
             backgroundRepeat: "no-repeat"
           }}
         >
-          <img alt="" src={require("../assets/images/calendar-high.jpg")} />
+          <img alt="" src={require("../assets/images/calendar.png")} />
         </div>
       </div>
     </div>
@@ -649,7 +650,7 @@ const Home = () => {
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="bg-white">
+      <div className="bg-white overflow-hidden">
         <Navbar />
 
         {/* Banner Section */}

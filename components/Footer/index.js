@@ -19,7 +19,7 @@ const socialIcons = [
 const Footer = () => {
   const [text, setText] = useState("");
   return (
-    <div className="py-5 lg:py-0  px-5 lg:px-16 grid grid-cols-12 bg-theme-navyblue">
+    <div className="py-5 lg:py-0 lg:pb-10 px-5 lg:px-16 grid grid-cols-12 bg-theme-navyblue footer-dotted-design">
       <div className="col-start-1 col-span-12 2xl:col-start-3 2xl:col-span-8 xl:col-start-2 xl:col-span-10 gap-4 flex flex-col lg:flex-row justify-between xl:justify-around items-center lg:items-start my-4">
         <div className="w-full 2xl:w-47 lg:w-5/7 sm:w-6/7 flex flex-col justify-between items-center lg:items-start lg:p-8 my-1 lg:my-2">
           <img
@@ -47,7 +47,7 @@ const Footer = () => {
               </a>
             ))}
           </div>
-          <div className="flex w-full md:w-5/7 lg:hidden rounded-3xl bg-theme-mediumblue flex-col p-10 shadow-xl my-6">
+          <div className="flex w-full md:w-5/7 lg:hidden rounded-3xl bg-theme-mediumblue flex-col p-10 shadow-xl my-6 relative">
             <p className="text-white font-bold text-2xl">
               Subscribe Our <br />
               <span className="text-theme">Newsletter</span>
@@ -72,6 +72,11 @@ const Footer = () => {
                 />
               </TextField>
             </div>
+            <img
+              src={require("../../assets/images/message.png")}
+              className="absolute top-5 right-5 w-16 h-20 transform -rotate-45"
+              alt=""
+            />
           </div>
           <p className="lg:hidden text-white text-center font-light pt-3 text-base sm:text-lg">
             &copy; Copyright 2021 <br /> MicroAgility Consulting Platform LLC.
@@ -142,6 +147,25 @@ const Footer = () => {
               <a href="#">Login</a>
             </li>
           </ul>
+        </div>
+      </div>
+      <div className="hidden col-start-1 col-span-12 xl:col-start-3 xl:col-span-8 lg:flex gap-4 py-2 px-5 items-center justify-between bg-theme-mediumblue rounded-lg">
+        <p className="text-white font-medium">
+          Looking to provide service?{" "}
+          <a href="#" className="text-theme">
+            Explore the iAgilian Home
+          </a>
+        </p>
+        <div className="flex justify-center items-center">
+          {socialIcons.map((v, i) => (
+            <a
+              key={i}
+              href="#"
+              className="w-14 h-14 rounded-full bg-theme-navyblue flex justify-center items-center mx-1 shadow-xl"
+            >
+              {v.icon}
+            </a>
+          ))}
         </div>
       </div>
     </div>

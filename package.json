@@ -8,8 +8,9 @@
     "start": "next start"
   },
   "dependencies": {
+    "@craco/craco": "^6.0.0",
     "@material/react-text-field": "^0.15.0",
-    "autoprefixer": "^10.1.0",
+    "autoprefixer": "^9",
     "next": "10.0.4",
     "next-images": "^1.6.2",
     "postcss": "^8.2.2",

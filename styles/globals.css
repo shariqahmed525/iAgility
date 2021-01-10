@@ -48,9 +48,10 @@ a {
 }
 
 .mdc-text-field__input {
+  caret-color: #1daeef !important;
   border-width: 2px !important;
-  border-color: #cdd5dd !important;
   padding-left: 5px !important;
+  border-color: #cdd5dd !important;
 }
 
 .mdc-text-field:not(.mdc-text-field--disabled) .mdc-text-field__input {
@@ -67,12 +68,35 @@ a {
   }
 }
 
+.what-can-an-dotted-design {
+  background-image: url("../assets/images/Path.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position-x: -250px;
+}
+
+.footer-dotted-design {
+  background-image: url("../assets/images/medium-dotted-circle.svg");
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: -399px 130px;
+}
+
 @media (max-width: 1024px) {
+  .footer-dotted-design {
+    background-image: none;
+  }
   .top-nav {
     padding-left: 0 !important;
   }
   .show-menu {
     display: block !important;
     transition: display 500ms ease-in;
+  }
+}
+
+@media (max-width: 1280px) {
+  .footer-dotted-design {
+    background-position: -499px 130px;
   }
 }
