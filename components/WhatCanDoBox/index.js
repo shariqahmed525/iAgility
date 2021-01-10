@@ -8,6 +8,7 @@ const WhatCanDoBox = ({ name, img, theme, index }) => {
           rounded-3xl
           h-52
           hover:shadow-xl
+          cursor-pointer
           hover:bg-theme-${theme}
           wrapper
       `}
@@ -20,7 +21,6 @@ const WhatCanDoBox = ({ name, img, theme, index }) => {
         h-44
         w-200px
         min-w-200px
-        cursor-pointer
         details-wrapper
         ${index === 2 ? "md:w-250px md:min-w-250px" : "w-200px min-w-200px"}
       `}
@@ -32,9 +32,7 @@ const WhatCanDoBox = ({ name, img, theme, index }) => {
           {name}
         </p>
       </div>
-      <div
-        className={`hidden arrow-div h-8 cursor-pointer px-2 justify-center`}
-      >
+      <div className={`hidden arrow-div h-8 px-2 justify-center`}>
         <HiArrowRight className="text-white text-xl mt-1" />
       </div>
     </div>
