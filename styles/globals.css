@@ -72,7 +72,7 @@ a {
   background-image: url("../assets/images/Path.svg");
   background-size: contain;
   background-repeat: no-repeat;
-  background-position-x: -250px;
+  background-position-x: -280px;
 }
 
 .footer-dotted-design {
@@ -84,6 +84,9 @@ a {
 
 @media (max-width: 1024px) {
   .footer-dotted-design {
+    background-image: none;
+  }
+  .what-can-an-dotted-design {
     background-image: none;
   }
   .top-nav {
@@ -98,5 +101,8 @@ a {
 @media (max-width: 1280px) {
   .footer-dotted-design {
     background-position: -499px 130px;
+  }
+  .what-can-an-dotted-design {
+    background-position-x: -350px;
   }
 }
