@@ -95,7 +95,7 @@ a {
 }
 
 .how-does-dotted-design {
-  background-image: url("../assets/images/Path.svg");
+  background-image: url("../assets/images/path.svg");
   background-size: auto;
   background-repeat: no-repeat;
   background-position-x: calc(100% + 100px);
@@ -132,7 +132,7 @@ a {
 }
 
 .what-can-an-dotted-design {
-  background-image: url("../assets/images/Path.svg");
+  background-image: url("../assets/images/path.svg");
   background-size: contain;
   background-repeat: no-repeat;
   background-position-x: -280px;
