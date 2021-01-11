@@ -61,6 +61,7 @@ const HowDoesIAgilityBoxes = [
     name: "Learning",
     theme: "theme-yellow",
     image: require("../assets/images/icon-1.png"),
+    arrowImg: require("../assets/images/gradient-arrow-1.png"),
     text:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus at aperiam, reprehenderit ut exercitationem nemo praesentium laudantium aut."
   },
@@ -68,6 +69,7 @@ const HowDoesIAgilityBoxes = [
     name: "Machine",
     theme: "theme-orange",
     image: require("../assets/images/icon-2.png"),
+    arrowImg: require("../assets/images/gradient-arrow-2.png"),
     text:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus at aperiam, reprehenderit ut exercitationem nemo praesentium laudantium aut."
   },
@@ -390,7 +392,7 @@ const HowDoesIAgility = () => {
           <div
             key={i}
             className={`${active !== i &&
-              "hidden"} xl:flex flex-1 flex-col items-center justify-between p-3`}
+              "hidden"} xl:flex flex-1 flex-col items-center justify-between p-3 relative`}
           >
             <IAgilityWorkBox index={i} {...v} active={active === i} />
           </div>

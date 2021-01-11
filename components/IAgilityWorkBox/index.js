@@ -2,14 +2,22 @@ import React from "react";
 import { FiChevronRight } from "react-icons/fi";
 import { HiOutlineChevronRight } from "react-icons/hi";
 
-const IAgilityWorkBox = ({ image, name, text, theme, active, index }) => {
+const IAgilityWorkBox = ({
+  image,
+  arrowImg,
+  name,
+  text,
+  theme,
+  active,
+  index
+}) => {
   return (
     <>
-      {index !== 2 && (
+      {arrowImg && (
         <img
           alt=""
-          src={require("../../assets/images/gradient-arrow-1.png")}
-          className="arrow-img"
+          src={arrowImg}
+          className="hidden xl:inline-block arrow-img"
         />
       )}
       <div
@@ -35,7 +43,7 @@ const IAgilityWorkBox = ({ image, name, text, theme, active, index }) => {
           <img
             alt=""
             src={require("../../assets/images/icon-1.png")}
-            className="w-12 h-12"
+            className="w-11 h-11 sm:w-14 sm:h-14"
           />
         </div>
         <div className="flex items-center justify-center">
@@ -51,7 +59,7 @@ const IAgilityWorkBox = ({ image, name, text, theme, active, index }) => {
           <img
             alt=""
             src={require("../../assets/images/icon-2.png")}
-            className="w-12 h-12"
+            className="w-11 h-11 sm:w-14 sm:h-14"
           />
         </div>
         <div className="flex items-center justify-center">
@@ -67,7 +75,7 @@ const IAgilityWorkBox = ({ image, name, text, theme, active, index }) => {
           <img
             alt=""
             src={require("../../assets/images/icon-3.png")}
-            className="w-12 h-12"
+            className="w-11 h-11 sm:w-14 sm:h-14"
           />
         </div>
       </div>

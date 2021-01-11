@@ -95,6 +95,13 @@ a {
   background-position-y: center;
 }
 
+.arrow-img {
+  position: absolute;
+  width: 60%;
+  top: 20%;
+  left: 70%;
+}
+
 .our-client-dotted-design {
   background-image: url("../assets/images/our-client.svg");
   background-size: 300px;
@@ -146,6 +153,11 @@ a {
   .our-client-dotted-design {
     background-position: 200px 70px;
   }
+  .arrow-img {
+    width: 50%;
+    top: 18%;
+    left: 75%;
+  }
 }
 
 @media (max-width: 1400px) {
@@ -157,6 +169,11 @@ a {
   }
   .banner-dotted-design {
     background-position-x: 10px;
+  }
+  .arrow-img {
+    width: 44%;
+    top: 18%;
+    left: 78%;
   }
 }
 
@@ -213,8 +230,8 @@ a {
     transition: display 500ms ease-in;
   }
   .page-banner {
-    background-size: 1200px, 600px;
-    background-position-x: calc(100% + 650px), -330px;
+    background-size: 1200px, 650px;
+    background-position-x: calc(100% + 650px), -360px;
     background-position-y: -100px, 200px;
   }
   .how-does-dotted-design {
