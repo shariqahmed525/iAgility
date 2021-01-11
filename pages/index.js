@@ -394,7 +394,12 @@ const HowDoesIAgility = () => {
             className={`${active !== i &&
               "hidden"} xl:flex flex-1 flex-col items-center justify-between p-3 relative`}
           >
-            <IAgilityWorkBox index={i} {...v} active={active === i} />
+            <IAgilityWorkBox
+              {...v}
+              index={i}
+              active={active === i}
+              setActive={index => setActive(index)}
+            />
           </div>
         ))}
       </div>

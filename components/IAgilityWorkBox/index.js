@@ -9,6 +9,7 @@ const IAgilityWorkBox = ({
   text,
   theme,
   active,
+  setActive,
   index
 }) => {
   return (
@@ -29,11 +30,9 @@ const IAgilityWorkBox = ({
         <img alt="" src={image} className="w-24 h-24" />
       </div>
       {/* Will show on mobile devices */}
-      <div
-        className={`${index !== 0 &&
-          "hidden"} flex xl:hidden justify-center w-full`}
-      >
+      <div className={"flex xl:hidden justify-center w-full"}>
         <div
+          onClick={() => setActive(0)}
           className={`
           ${index === 0 ? `bg-theme-yellow` : "bg-transparent"}
           p-4 sm:p-7 md:p-7 xl:bg-theme-yellow hover:bg-theme-yellow border-2 border-theme-yellow border-solid rounded-full
@@ -50,6 +49,7 @@ const IAgilityWorkBox = ({
           <HiOutlineChevronRight className="text-yellow text-4xl" />
         </div>
         <div
+          onClick={() => setActive(1)}
           className={`
           ${index === 1 ? `bg-theme-orange` : "bg-transparent"}
           p-4 sm:p-7 md:p-7 xl:bg-theme-orange hover:bg-theme-orange border-2 border-theme-orange border-solid rounded-full
@@ -66,6 +66,7 @@ const IAgilityWorkBox = ({
           <HiOutlineChevronRight className="text-orange text-4xl" />
         </div>
         <div
+          onClick={() => setActive(2)}
           className={`
           ${index === 2 ? `bg-theme-green` : "bg-transparent"}
           p-4 sm:p-7 md:p-7 xl:bg-theme-green hover:bg-theme-green border-2 border-theme-green border-solid rounded-full

@@ -64,10 +64,10 @@ a {
 
 .page-banner {
   background-image: url("../assets/images/banner-bg.svg"),
-    url("../assets/images/small-dotted-circle.svg");
-  background-size: 1400px, 600px;
+    url("../assets/images/medium-dotted-circle.svg");
+  background-size: 1400px, 500px;
   background-repeat: no-repeat;
-  background-position-x: calc(100% + 640px), -330px;
+  background-position-x: calc(100% + 640px), -350px;
   background-position-y: -300px, 100px;
 }
 
@@ -165,7 +165,7 @@ a {
     padding-left: 2.5rem !important;
   }
   .page-banner {
-    background-position-x: calc(100% + 740px), -330px;
+    background-position-x: calc(100% + 740px), -360px;
   }
   .banner-dotted-design {
     background-position-x: 10px;
@@ -230,8 +230,8 @@ a {
     transition: display 500ms ease-in;
   }
   .page-banner {
-    background-size: 1200px, 650px;
-    background-position-x: calc(100% + 650px), -360px;
+    background-size: 1200px, 500px;
+    background-position-x: calc(100% + 650px), -300px;
     background-position-y: -100px, 200px;
   }
   .how-does-dotted-design {
@@ -258,6 +258,10 @@ a {
 }
 
 @media (max-width: 640px) {
+  .page-banner {
+    background-size: 1200px, 550px;
+    background-position-x: calc(100% + 650px), -330px;
+  }
   .our-client-dotted-design {
     background-position: -50px 80px;
   }
@@ -268,6 +272,6 @@ a {
 
 @media (max-width: 480px) {
   .page-banner {
-    background-position-y: -70px, 250px;
+    background-position-y: -70px, 280px;
   }
 }
