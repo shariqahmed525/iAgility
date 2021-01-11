@@ -5,6 +5,13 @@ import { HiOutlineChevronRight } from "react-icons/hi";
 const IAgilityWorkBox = ({ image, name, text, theme, active, index }) => {
   return (
     <>
+      {index !== 2 && (
+        <img
+          alt=""
+          src={require("../../assets/images/gradient-arrow-1.png")}
+          className="arrow-img"
+        />
+      )}
       <div
         className={`hidden xl:inline-flex  
           p-5 xl:bg-${theme} hover:bg-${theme} border-2 border-${theme} border-solid rounded-full
@@ -28,7 +35,7 @@ const IAgilityWorkBox = ({ image, name, text, theme, active, index }) => {
           <img
             alt=""
             src={require("../../assets/images/icon-1.png")}
-            className="w-14 h-14"
+            className="w-12 h-12"
           />
         </div>
         <div className="flex items-center justify-center">
@@ -44,7 +51,7 @@ const IAgilityWorkBox = ({ image, name, text, theme, active, index }) => {
           <img
             alt=""
             src={require("../../assets/images/icon-2.png")}
-            className="w-14 h-14"
+            className="w-12 h-12"
           />
         </div>
         <div className="flex items-center justify-center">
@@ -60,7 +67,7 @@ const IAgilityWorkBox = ({ image, name, text, theme, active, index }) => {
           <img
             alt=""
             src={require("../../assets/images/icon-3.png")}
-            className="w-14 h-14"
+            className="w-12 h-12"
           />
         </div>
       </div>
