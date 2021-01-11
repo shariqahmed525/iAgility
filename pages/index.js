@@ -173,7 +173,7 @@ const BlogBoxes = [
 
 const BannerSection = () => {
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-2 px-5 lg:px-16 banner-bg">
+    <div className="grid grid-cols-1 lg:grid-cols-2 px-5 lg:px-16">
       <div className="grid justify-center lg:justify-end pt-10 pb-3 lg:pt-32">
         <div>
           {/* Text Section */}

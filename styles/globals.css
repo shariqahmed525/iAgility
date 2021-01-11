@@ -63,19 +63,12 @@ a {
 }
 
 .page-banner {
-  background-image: url("../assets/images/banner-bg.svg");
-  background-size: 1400px;
+  background-image: url("../assets/images/banner-bg.svg"),
+    url("../assets/images/small-dotted-circle.svg");
+  background-size: 1400px, 600px;
   background-repeat: no-repeat;
-  background-position-x: calc(100% + 640px);
-  background-position-y: -300px;
-}
-
-.banner-bg {
-  background-image: url("../assets/images/small-dotted-circle.svg");
-  background-size: 600px;
-  background-repeat: no-repeat;
-  background-position-x: -300px;
-  background-position-y: center;
+  background-position-x: calc(100% + 640px), -330px;
+  background-position-y: -300px, 100px;
 }
 
 .banner-dotted-design {
@@ -95,18 +88,18 @@ a {
 }
 
 .how-does-dotted-design {
-  background-image: url("../assets/images/path.svg");
+  background-image: url("../assets/images/how-does.svg");
   background-size: auto;
   background-repeat: no-repeat;
-  background-position-x: calc(100% + 100px);
+  background-position-x: calc(100% + 200px);
   background-position-y: center;
 }
 
 .our-client-dotted-design {
-  background-image: url("../assets/images/Union\ 3.svg");
+  background-image: url("../assets/images/our-client.svg");
   background-size: 300px;
   background-repeat: no-repeat;
-  background-position: 200px 20px;
+  background-position: 280px 70px;
 }
 
 .why-choose-dotted-design {
@@ -132,7 +125,7 @@ a {
 }
 
 .what-can-an-dotted-design {
-  background-image: url("../assets/images/path.svg");
+  background-image: url("../assets/images/what-can.svg");
   background-size: contain;
   background-repeat: no-repeat;
   background-position-x: -280px;
@@ -150,6 +143,9 @@ a {
   .banner-dotted-design {
     background-position-x: 20px;
   }
+  .our-client-dotted-design {
+    background-position: 200px 70px;
+  }
 }
 
 @media (max-width: 1400px) {
@@ -157,7 +153,7 @@ a {
     padding-left: 2.5rem !important;
   }
   .page-banner {
-    background-position-x: calc(100% + 740px);
+    background-position-x: calc(100% + 740px), -330px;
   }
   .banner-dotted-design {
     background-position-x: 10px;
@@ -166,7 +162,7 @@ a {
 
 @media (max-width: 1280px) {
   .page-banner {
-    background-size: 1300px;
+    background-size: 1300px, 0;
     background-position-x: calc(100% + 700px);
   }
   .banner-dotted-design {
@@ -174,6 +170,9 @@ a {
   }
   .what-is-dotted-design {
     background-position-x: -550px;
+  }
+  .our-client-dotted-design {
+    background-position: 70px 70px;
   }
   .why-choose-solid-design {
     width: 100% !important;
@@ -185,9 +184,6 @@ a {
   .what-can-an-dotted-design {
     background-position-x: -350px;
   }
-  .our-client-dotted-design {
-    background-position: 0px 20px;
-  }
   .footer-dotted-design {
     background-position: -499px 130px;
   }
@@ -195,7 +191,7 @@ a {
 
 @media (max-width: 1100px) {
   .page-banner {
-    background-size: 1200px;
+    background-size: 1200px, 0;
     background-position-x: calc(100% + 650px);
     background-position-y: -200px;
   }
@@ -217,14 +213,18 @@ a {
     transition: display 500ms ease-in;
   }
   .page-banner {
-    background-position-x: calc(100% + 650px);
-    background-position-y: -100px;
+    background-size: 1200px, 600px;
+    background-position-x: calc(100% + 650px), -330px;
+    background-position-y: -100px, 200px;
+  }
+  .how-does-dotted-design {
+    background-image: none;
   }
   .what-is-dotted-design {
     background-image: none;
   }
   .our-client-dotted-design {
-    background-position-x: 0px;
+    background-position: 250px 80px;
   }
   .why-choose-dotted-design {
     background-image: none;
@@ -234,7 +234,16 @@ a {
   }
 }
 
+@media (max-width: 768px) {
+  .our-client-dotted-design {
+    background-position: 140px 80px;
+  }
+}
+
 @media (max-width: 640px) {
+  .our-client-dotted-design {
+    background-position: -50px 80px;
+  }
   .calendar-dotted-design {
     background-size: 300px;
   }
@@ -242,6 +251,6 @@ a {
 
 @media (max-width: 480px) {
   .page-banner {
-    background-position-y: -70px;
+    background-position-y: -70px, 250px;
   }
 }

@@ -16,51 +16,51 @@ const IAgilityWorkBox = ({ image, name, text, theme, active, index }) => {
       {/* Will show on mobile devices */}
       <div
         className={`${index !== 0 &&
-          "hidden"} flex xl:hidden justify-between w-full`}
+          "hidden"} flex xl:hidden justify-center w-full`}
       >
         <div
           className={`
           ${index === 0 ? `bg-theme-yellow` : "bg-transparent"}
-          p-3 sm:p-7 md:p-7 xl:bg-theme-yellow hover:bg-theme-yellow border-2 border-theme-yellow border-solid rounded-full
+          p-4 sm:p-7 md:p-7 xl:bg-theme-yellow hover:bg-theme-yellow border-2 border-theme-yellow border-solid rounded-full
           cursor-pointer xl:cursor-default
         `}
         >
           <img
             alt=""
             src={require("../../assets/images/icon-1.png")}
-            className="w-10 h-10 sm:w-14 sm:h-14"
+            className="w-14 h-14"
           />
         </div>
-        <div className="flex flex-1 items-center justify-center">
+        <div className="flex items-center justify-center">
           <HiOutlineChevronRight className="text-yellow text-4xl" />
         </div>
         <div
           className={`
           ${index === 1 ? `bg-theme-orange` : "bg-transparent"}
-          p-3 sm:p-7 md:p-7 xl:bg-theme-orange hover:bg-theme-orange border-2 border-theme-orange border-solid rounded-full
+          p-4 sm:p-7 md:p-7 xl:bg-theme-orange hover:bg-theme-orange border-2 border-theme-orange border-solid rounded-full
           cursor-pointer xl:cursor-default
         `}
         >
           <img
             alt=""
             src={require("../../assets/images/icon-2.png")}
-            className="w-10 h-10 sm:w-14 sm:h-14"
+            className="w-14 h-14"
           />
         </div>
-        <div className="flex flex-1 items-center justify-center">
+        <div className="flex items-center justify-center">
           <HiOutlineChevronRight className="text-orange text-4xl" />
         </div>
         <div
           className={`
           ${index === 2 ? `bg-theme-green` : "bg-transparent"}
-          p-3 sm:p-7 md:p-7 xl:bg-theme-green hover:bg-theme-green border-2 border-theme-green border-solid rounded-full
+          p-4 sm:p-7 md:p-7 xl:bg-theme-green hover:bg-theme-green border-2 border-theme-green border-solid rounded-full
           cursor-pointer xl:cursor-default
         `}
         >
           <img
             alt=""
             src={require("../../assets/images/icon-3.png")}
-            className="w-10 h-10 sm:w-14 sm:h-14"
+            className="w-14 h-14"
           />
         </div>
       </div>
