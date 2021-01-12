@@ -501,7 +501,7 @@ const ClientsFeedBack = () => {
 
 const WhyChooseIAgility = () => {
   return (
-    <div className="py-16 px-5 lg:px-16 grid grid-cols-12 gap-4 why-choose-dotted-design">
+    <div className="py-12 px-5 lg:px-16 grid grid-cols-12 gap-4 why-choose-dotted-design">
       <div className="col-start-1 col-span-12 lg:col-start-3 lg:col-span-8 flex flex-col-reverse 2xl:flex-row items-center justify-between">
         <div className="py-10 flex flex-col sm:flex-row justify-center items-center pl-lg md:pl-xl why-choose-solid-design">
           <div className="flex w-full sm:w-auto flex-col mx-2 justify-center">
@@ -546,7 +546,7 @@ const WhyChooseIAgility = () => {
 
 const WhatCanAnIAgilian = () => {
   return (
-    <div className="py-16 px-5 lg:px-16 grid grid-cols-12 gap-4 bg-theme what-can-an-dotted-design">
+    <div className="py-12 px-5 lg:px-16 grid grid-cols-12 gap-4 bg-theme what-can-an-dotted-design">
       <div className="col-start-1 col-span-12 lg:col-start-3 lg:col-span-8 flex flex-col items-center">
         <img
           src={require("../assets/images/logo-upperside.svg")}
@@ -600,7 +600,7 @@ const WhatCanAnIAgilian = () => {
 
 const CalendarSection = () => {
   return (
-    <div className="py-10 px-5 lg:px-16 grid grid-cols-12 gap-4 bg-theme-lightblue">
+    <div className="py-4 px-5 lg:px-16 grid grid-cols-12 gap-4 bg-theme-lightblue">
       <div className="col-start-1 col-span-12 lg:col-start-3 lg:col-span-8 flex flex-col lg:flex-row items-center justify-center">
         <div className="w-full 2xl:w-47 lg:w-6/7 sm:w-5/7 pt-10 flex flex-col items-center lg:items-start">
           <p className="text-navyblue font-bold text-4xl xl:text-5xl max-w-lg lg:max-w-md text-center lg:text-left py-3">
@@ -610,7 +610,7 @@ const CalendarSection = () => {
           <p className="py-3 font-light text-center max-w-lg lg:max-w-md lg:text-left">
             Talk to us, we'll find the perfect consultant for your business
           </p>
-          <div className="flex justify-center 2xl:justify-start py-4">
+          <div className="py-4">
             <Button text="Schedule an Appointment" />
           </div>
         </div>
