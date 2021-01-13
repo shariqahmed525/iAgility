@@ -503,7 +503,7 @@ const WhyChooseIAgility = () => {
   return (
     <div className="py-12 px-5 lg:px-16 grid grid-cols-12 gap-4 why-choose-dotted-design">
       <div className="col-start-1 col-span-12 lg:col-start-3 lg:col-span-8 flex flex-col-reverse 2xl:flex-row items-center justify-between">
-        <div className="py-10 flex flex-col sm:flex-row justify-center items-center pl-lg md:pl-xl why-choose-solid-design">
+        <div className="py-10 flex flex-col sm:flex-row justify-center items-center pl-0 lg:pl-xl why-choose-solid-design">
           <div className="flex w-full sm:w-auto flex-col mx-2 justify-center">
             {WhyChooseIAgilityBoxes.slice(0, 3).map((v, i) => (
               <WhyChooseBox key={i} {...v} />
@@ -634,7 +634,7 @@ const BlogSection = () => {
           Recent <span className="text-theme">Blog</span> Post
         </p>
       </div>
-      <div className="col-start-1 col-span-12 xl:col-start-3 xl:col-span-8 gap-4 flex flex-1 flex-col lg:flex-row items-center justify-between">
+      <div className="col-start-1 col-span-12 xl:col-start-3 xl:col-span-8 gap-4 2xl:gap-8 flex flex-1 flex-col lg:flex-row items-center justify-between">
         {BlogBoxes.map((v, i) => (
           <BlogBox key={i} {...v} />
         ))}
