@@ -481,12 +481,9 @@ const ClientsFeedBack = () => {
               </p>
               <Reviewer video name="M. Adnan" text="Best Company" />
             </div>
-            <a
-              href="#"
-              className="w-14 h-14 rounded-full bg-white shadow-lg border-8 border-solid border-red border-opacity-25 flex justify-center items-center"
-            >
+            <span className="w-14 h-14 rounded-full bg-white shadow-lg border-8 border-solid border-red border-opacity-25 flex justify-center items-center cursor-pointer">
               <BiPlay className="text-theme-red text-4xl" />
-            </a>
+            </span>
           </div>
         </div>
       </div>
