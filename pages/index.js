@@ -107,7 +107,7 @@ const WhyChooseIAgilityBoxes = [
   {
     name: "Highest",
     coloredText: "Qualified Consultant",
-    theme: "theme",
+    theme: "skyblue",
     text:
       "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique, adipisci reiciendis.Earum alias voluptatibus harum iusto eius consequatur delectus aliquid totam."
   },
@@ -187,7 +187,7 @@ const BannerSection = () => {
               &amp; Transform the way you work with an
             </p>
             <p className="text-5xl text-theme-navyblue text-center lg:text-left font-bold pt-1">
-              Independent <span className="text-theme">Consultant</span>
+              Independent <span className="text-theme-skyblue">Consultant</span>
             </p>
             <p className="text-sm text-theme-navyblue text-center lg:text-left font-light py-5">
               For Sophisticated Clients and Consultants
@@ -256,7 +256,7 @@ const WhatIsiAgility = () => {
             non nesciunt esse beatae asperiores. Provident eaque dolorem
             architecto quasi sed ratione consequatur porro? Sit ipsum illum
             dolorem similique voluptate magni{" "}
-            <a href="#" className="text-theme font-semibold">
+            <a href="#" className="text-theme-skyblue font-semibold">
               your own personalized dashboard with ease!
             </a>
           </span>
@@ -304,7 +304,7 @@ const WhatIsiAgility = () => {
             alt="logo-upper"
           />
           <p className="text-theme-navyblue font-bold text-4xl text-center py-3">
-            What Is <span className="text-theme">iAgility?</span>
+            What Is <span className="text-theme-skyblue">iAgility?</span>
           </p>
           <p className="py-3 font-light text-center max-w-2xl lg:max-w-4xl">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis
@@ -376,13 +376,13 @@ const HowDoesIAgility = () => {
           alt="logo-upper"
         />
         <p className="text-theme-navyblue font-bold text-4xl text-center py-3">
-          How Does <span className="text-theme">iAgility?</span> Work
+          How Does <span className="text-theme-skyblue">iAgility?</span> Work
         </p>
         <p className="py-3 font-light text-center max-w-2xl lg:max-w-4xl">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. dolorem
           architecto quasi sed ratione consequatur porro? Sit ipsum illum
           dolorem similique voluptate magni{" "}
-          <a href="#" className="text-theme font-semibold">
+          <a href="#" className="text-theme-skyblue font-semibold">
             your own personalized dashboard with ease!
           </a>
         </p>
@@ -523,15 +523,15 @@ const WhyChooseIAgility = () => {
             />
           </div>
           <p className="text-theme-navyblue font-bold text-4xl xl:text-5xl text-center 2xl:text-left py-3">
-            Why Choose <span className="text-theme">iAgility</span> Over Other
-            Platform?
+            Why Choose <span className="text-theme-skyblue">iAgility</span> Over
+            Other Platform?
           </p>
           <p className="py-3 font-light text-center 2xl:text-left">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis
             non nesciunt esse beatae asperiores. Provident eaque dolorem
             architecto quasi sed ratione consequatur porro? Sit ipsum illum
             dolorem similique voluptate magni{" "}
-            <a href="#" className="text-theme font-semibold">
+            <a href="#" className="text-theme-skyblue font-semibold">
               your own personalized dashboard with ease!
             </a>
           </p>
@@ -605,7 +605,7 @@ const CalendarSection = () => {
         <div className="w-full 2xl:w-47 lg:w-6/7 sm:w-5/7 pt-10 flex flex-col items-center lg:items-start">
           <p className="text-theme-navyblue font-bold text-4xl xl:text-5xl max-w-lg lg:max-w-md text-center lg:text-left py-3">
             Need a Different Kind of{" "}
-            <span className="text-theme">Consultant</span>?
+            <span className="text-theme-skyblue">Consultant</span>?
           </p>
           <p className="py-3 font-light text-center max-w-lg lg:max-w-md lg:text-left">
             Talk to us, we'll find the perfect consultant for your business
@@ -631,7 +631,7 @@ const BlogSection = () => {
           alt="logo-upper"
         />
         <p className="text-theme-navyblue font-bold text-4xl text-center py-3">
-          Recent <span className="text-theme">Blog</span> Post
+          Recent <span className="text-theme-skyblue">Blog</span> Post
         </p>
       </div>
       <div className="col-start-1 col-span-12 xl:col-start-3 xl:col-span-8 gap-4 2xl:gap-8 flex flex-1 flex-col lg:flex-row items-center justify-between">

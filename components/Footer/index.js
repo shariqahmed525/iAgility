@@ -28,12 +28,12 @@ const Footer = () => {
             alt="logo-white"
           />
           <p className="text-white text-lg lg:text-sm 2xl:text-base">
-            <span className="text-theme font-bold">Tel: </span>
+            <span className="text-theme-skyblue font-bold">Tel: </span>
             <span className="pr-2"></span>
             (604) 474-4463
           </p>
           <p className="text-white text-lg lg:text-sm 2xl:text-base">
-            <span className="text-theme font-bold">Email: </span>
+            <span className="text-theme-skyblue font-bold">Email: </span>
             <span className="pr-2"></span>
             support@iAgility.com
           </p>
@@ -51,7 +51,7 @@ const Footer = () => {
           <div className="flex w-full md:w-5/7 lg:hidden rounded-3xl bg-theme-mediumblue flex-col p-10 shadow-xl my-6 relative">
             <p className="text-white font-bold text-2xl">
               Subscribe Our <br />
-              <span className="text-theme">Newsletter</span>
+              <span className="text-theme-skyblue">Newsletter</span>
             </p>
             <p className="text-gray-400 py-2 max-w-xs">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -86,7 +86,7 @@ const Footer = () => {
         <div className="hidden w-full 2xl:w-47 lg:w-6/7 sm:w-6/7 lg:flex flex-row justify-between lg:p-8 lg:h-auto my-1 lg:my-2">
           <ul className="">
             <li className="pb-5">
-              <a href="#" className="text-theme font-medium">
+              <a href="#" className="text-theme-skyblue font-medium">
                 Learn More
               </a>
             </li>
@@ -105,7 +105,7 @@ const Footer = () => {
           </ul>
           <ul>
             <li className="pb-5">
-              <a href="#" className="text-theme font-medium">
+              <a href="#" className="text-theme-skyblue font-medium">
                 Our Company
               </a>
             </li>
@@ -126,7 +126,7 @@ const Footer = () => {
         <div className="hidden w-full 2xl:w-47 lg:w-6/7 sm:w-6/7 lg:flex flex-row justify-between lg:p-8 lg:h-auto my-1 lg:my-2">
           <ul className="">
             <li className="pb-5">
-              <a href="#" className="text-theme font-medium">
+              <a href="#" className="text-theme-skyblue font-medium">
                 Get Started
               </a>
             </li>
@@ -153,7 +153,7 @@ const Footer = () => {
       <div className="hidden col-start-1 col-span-12 xl:col-start-3 xl:col-span-8 lg:flex gap-4 py-2 px-5 items-center justify-between bg-theme-mediumblue rounded-lg">
         <p className="text-white font-medium">
           Looking to provide service?{" "}
-          <a href="#" className="text-theme">
+          <a href="#" className="text-theme-skyblue">
             Explore the iAgilian Home
           </a>
         </p>

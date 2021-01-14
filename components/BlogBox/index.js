@@ -11,7 +11,7 @@ const BlogBox = ({ img, date, month, year, name, text }) => {
       />
       <div className="p-4 lg:p-0 justify-start">
         <p className="w-36 lg:mt-m-15 lg:mb-2 mx-0 lg:mx-auto text-left lg:text-center font-semibold bg-white py-1 px-0 text-sm font-light rounded-full">
-          <span className="text-theme">{date}</span> {month}, {year}
+          <span className="text-theme-skyblue">{date}</span> {month}, {year}
         </p>
         <p className="font-bold text-xl text-theme-navyblue text-base py-1">
           {name}

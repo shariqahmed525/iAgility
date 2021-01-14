@@ -98,7 +98,7 @@ const IAgilityWorkBox = ({
         className={`
           ${!active && "hidden"}
           xl:inline-flex
-          text-sm mt-2 w-36 font-medium text-center text-theme border border-solid border-theme rounded-full py-2.5 px-4 flex justify-between items-center mx-auto
+          text-sm mt-2 w-36 font-medium text-center text-theme-skyblue border border-solid border-theme-skyblue rounded-full py-2.5 px-4 flex justify-between items-center mx-auto
         `}
       >
         <span className="flex flex-1 justify-center">Read More</span>

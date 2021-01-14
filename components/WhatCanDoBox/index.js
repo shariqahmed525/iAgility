@@ -27,7 +27,7 @@ const WhatCanDoBox = ({ name, img, theme, index }) => {
       >
         <img alt="" src={img} className="mb-3 mx-auto w-12" />
         <p
-          className={`text-center text-base md:text-lg font-semibold text-${theme}`}
+          className={`text-center text-base md:text-lg font-semibold text-theme-${theme}`}
         >
           {name}
         </p>

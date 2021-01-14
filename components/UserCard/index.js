@@ -13,7 +13,7 @@ const UserCard = ({ name, expertise, img }) => {
         <ThreeDots />
       </div>
       <p className="py-1 font-medium text-center text-xs md:text-sm">{name}</p>
-      <p className="py-1 font-medium text-center text-xs md:text-sm text-theme">
+      <p className="py-1 font-medium text-center text-xs md:text-sm text-theme-skyblue">
         {expertise}
       </p>
     </div>
