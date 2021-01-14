@@ -46,7 +46,7 @@ const IAgilityWorkBox = ({
           />
         </div>
         <div className="flex items-center justify-center">
-          <HiOutlineChevronRight className="text-yellow text-4xl" />
+          <HiOutlineChevronRight className="text-theme-yellow text-4xl" />
         </div>
         <div
           onClick={() => setActive(1)}
@@ -63,7 +63,7 @@ const IAgilityWorkBox = ({
           />
         </div>
         <div className="flex items-center justify-center">
-          <HiOutlineChevronRight className="text-orange text-4xl" />
+          <HiOutlineChevronRight className="text-theme-orange text-4xl" />
         </div>
         <div
           onClick={() => setActive(2)}

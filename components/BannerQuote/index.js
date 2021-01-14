@@ -20,10 +20,10 @@ const BannerQuote = () => {
         <Reviewer name="M. Adnan" text="Best Company" />
       </div>
       <div className="flex flex-row">
-        <a href="#" className="text-xl text-themegray">
+        <a href="#" className="text-xl text-theme-gray">
           <FiArrowLeft />
         </a>
-        <a href="#" className="ml-1 text-xl text-theme">
+        <a href="#" className="ml-1 text-xl text-theme-skyblue">
           <FiArrowRight />
         </a>
       </div>

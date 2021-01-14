@@ -46,9 +46,9 @@ const Navbar = () => {
 
         {/* Menu Icon */}
         <div onClick={toggleMenu} className="block lg:hidden cursor-pointer">
-          <span className="w-10 rounded-md h-1 bg-theme block my-1.5"></span>
-          <span className="w-8 rounded-md h-1 bg-theme block my-1.5"></span>
-          <span className="w-10 rounded-md h-1 bg-theme block my-1.5"></span>
+          <span className="w-10 rounded-md h-1 bg-theme-skyblue block my-1.5"></span>
+          <span className="w-8 rounded-md h-1 bg-theme-skyblue block my-1.5"></span>
+          <span className="w-10 rounded-md h-1 bg-theme-skyblue block my-1.5"></span>
         </div>
       </div>
 
@@ -81,7 +81,7 @@ const Navbar = () => {
           <li className="lg:px-4 py-3 lg:py-2 lg:border-b-0 border-b border-solid border-gray-200">
             <a
               href="#"
-              className="lg:px-0 px-10 text-sm text-center font-medium text-red"
+              className="lg:px-0 px-10 text-sm text-center font-medium text-theme-red"
             >
               Book an iAgilian!
             </a>
@@ -89,7 +89,7 @@ const Navbar = () => {
           <li className="lg:px-2 py-5 lg:py-2 lg:border-b-0 border-b border-solid border-gray-200">
             <a
               href="#"
-              className="lg:mx-0 mx-8 text-sm font-medium text-center text-white bg-theme shadow-theme rounded-full py-3 px-7"
+              className="lg:mx-0 mx-8 text-sm font-medium text-center text-white bg-theme-skyblue shadow-theme rounded-full py-3 px-7"
             >
               Login
             </a>

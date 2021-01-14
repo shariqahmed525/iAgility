@@ -26,7 +26,7 @@ const iAgilityBoxes = [
     icon: active => (
       <AiOutlineLaptop
         className={`text-4xl md:text-2xl ${
-          active ? "text-yellow" : "text-white"
+          active ? "text-theme-yellow" : "text-white"
         }`}
       />
     ),
@@ -37,7 +37,7 @@ const iAgilityBoxes = [
     icon: active => (
       <RiUser2Line
         className={`text-4xl md:text-2xl ${
-          active ? "text-orange" : "text-white"
+          active ? "text-theme-orange" : "text-white"
         }`}
       />
     ),
@@ -48,7 +48,7 @@ const iAgilityBoxes = [
     icon: active => (
       <HiOutlineLightBulb
         className={`text-4xl md:text-2xl ${
-          active ? "text-green" : "text-white"
+          active ? "text-theme-green" : "text-white"
         }`}
       />
     ),
@@ -180,16 +180,16 @@ const BannerSection = () => {
         <div>
           {/* Text Section */}
           <div>
-            <p className="text-2xl text-navyblue text-center lg:text-left font-semibold">
+            <p className="text-2xl text-theme-navyblue text-center lg:text-left font-semibold">
               Hire an iAgilian
             </p>
-            <p className="text-2xl text-navyblue text-center lg:text-left font-light pt-0.5 pb-1">
+            <p className="text-2xl text-theme-navyblue text-center lg:text-left font-light pt-0.5 pb-1">
               &amp; Transform the way you work with an
             </p>
-            <p className="text-5xl text-navyblue text-center lg:text-left font-bold pt-1">
+            <p className="text-5xl text-theme-navyblue text-center lg:text-left font-bold pt-1">
               Independent <span className="text-theme">Consultant</span>
             </p>
-            <p className="text-sm text-navyblue text-center lg:text-left font-light py-5">
+            <p className="text-sm text-theme-navyblue text-center lg:text-left font-light py-5">
               For Sophisticated Clients and Consultants
             </p>
             <a
@@ -265,10 +265,10 @@ const WhatIsiAgility = () => {
           <Button text="Contact iAgility Today" />
           <a
             href="#"
-            className="text-sm mt-2 mx-auto lg:mx-0 w-36 font-medium text-center text-red rounded-full py-3 px-4 flex justify-between items-center"
+            className="text-sm mt-2 mx-auto lg:mx-0 w-36 font-medium text-center text-theme-red rounded-full py-3 px-4 flex justify-between items-center"
           >
             <span className="flex flex-1 justify-center">Read More</span>
-            <FiChevronRight className="text-red" />
+            <FiChevronRight className="text-theme-red" />
           </a>
         </div>
       </>
@@ -285,7 +285,7 @@ const WhatIsiAgility = () => {
       >
         <div
           className={
-            "w-16 h-16 bg-theme border border-theme shadow-theme border-opacity-75 rounded-full flex items-center justify-center"
+            "w-16 h-16 bg-theme-skyblue border border-theme shadow-theme border-opacity-75 rounded-full flex items-center justify-center"
           }
           style={{ minWidth: "3.5rem" }}
         >
@@ -303,7 +303,7 @@ const WhatIsiAgility = () => {
             src={require("../assets/images/logo-upperside-light.svg")}
             alt="logo-upper"
           />
-          <p className="text-navyblue font-bold text-4xl text-center py-3">
+          <p className="text-theme-navyblue font-bold text-4xl text-center py-3">
             What Is <span className="text-theme">iAgility?</span>
           </p>
           <p className="py-3 font-light text-center max-w-2xl lg:max-w-4xl">
@@ -369,13 +369,13 @@ const HowDoesIAgility = () => {
   const [active, setActive] = useState(0);
 
   return (
-    <div className="py-16 px-5 lg:px-16 grid grid-cols-12 gap-4 bg-theme bg-opacity-5 how-does-dotted-design">
+    <div className="py-16 px-5 lg:px-16 grid grid-cols-12 gap-4 bg-theme-skyblue bg-opacity-5 how-does-dotted-design">
       <div className="col-start-1 col-span-12 lg:col-start-3 lg:col-span-8 flex flex-col items-center">
         <img
           src={require("../assets/images/logo-upperside.svg")}
           alt="logo-upper"
         />
-        <p className="text-navyblue font-bold text-4xl text-center py-3">
+        <p className="text-theme-navyblue font-bold text-4xl text-center py-3">
           How Does <span className="text-theme">iAgility?</span> Work
         </p>
         <p className="py-3 font-light text-center max-w-2xl lg:max-w-4xl">
@@ -435,7 +435,7 @@ const ClientsFeedBack = () => {
   return (
     <div className="py-16 px-5 lg:px-16 grid grid-cols-12 gap-4 bg-theme-lightblue our-client-dotted-design">
       <div className="col-start-1 col-span-12 lg:col-start-3 lg:col-span-8">
-        <p className="text-2xl lg:text-3xl text-navyblue font-bold text-center py-3">
+        <p className="text-2xl lg:text-3xl text-theme-navyblue font-bold text-center py-3">
           Our Client's Feedback
         </p>
       </div>
@@ -485,13 +485,13 @@ const ClientsFeedBack = () => {
               href="#"
               className="w-14 h-14 rounded-full bg-white shadow-lg border-8 border-solid border-red border-opacity-25 flex justify-center items-center"
             >
-              <BiPlay className="text-red text-4xl" />
+              <BiPlay className="text-theme-red text-4xl" />
             </a>
           </div>
         </div>
       </div>
       <div className="col-start-1 col-span-12 lg:col-start-3 lg:col-span-8 flex py-2 justify-center items-center">
-        <span className="w-2 h-2 mx-1 rounded-full inline-flex bg-theme"></span>
+        <span className="w-2 h-2 mx-1 rounded-full inline-flex bg-theme-skyblue"></span>
         <span className="w-2 h-2 mx-1 rounded-full inline-flex bg-white"></span>
         <span className="w-2 h-2 mx-1 rounded-full inline-flex bg-white"></span>
       </div>
@@ -522,7 +522,7 @@ const WhyChooseIAgility = () => {
               alt="logo-upper"
             />
           </div>
-          <p className="text-navyblue font-bold text-4xl xl:text-5xl text-center 2xl:text-left py-3">
+          <p className="text-theme-navyblue font-bold text-4xl xl:text-5xl text-center 2xl:text-left py-3">
             Why Choose <span className="text-theme">iAgility</span> Over Other
             Platform?
           </p>
@@ -546,7 +546,7 @@ const WhyChooseIAgility = () => {
 
 const WhatCanAnIAgilian = () => {
   return (
-    <div className="py-12 px-5 lg:px-16 grid grid-cols-12 gap-4 bg-theme what-can-an-dotted-design">
+    <div className="py-12 px-5 lg:px-16 grid grid-cols-12 gap-4 bg-theme-skyblue what-can-an-dotted-design">
       <div className="col-start-1 col-span-12 lg:col-start-3 lg:col-span-8 flex flex-col items-center">
         <img
           src={require("../assets/images/logo-upperside.svg")}
@@ -603,7 +603,7 @@ const CalendarSection = () => {
     <div className="py-4 px-5 lg:px-16 grid grid-cols-12 gap-4 bg-theme-lightblue">
       <div className="col-start-1 col-span-12 lg:col-start-3 lg:col-span-8 flex flex-col lg:flex-row items-center justify-center">
         <div className="w-full 2xl:w-47 lg:w-6/7 sm:w-5/7 pt-10 flex flex-col items-center lg:items-start">
-          <p className="text-navyblue font-bold text-4xl xl:text-5xl max-w-lg lg:max-w-md text-center lg:text-left py-3">
+          <p className="text-theme-navyblue font-bold text-4xl xl:text-5xl max-w-lg lg:max-w-md text-center lg:text-left py-3">
             Need a Different Kind of{" "}
             <span className="text-theme">Consultant</span>?
           </p>
@@ -630,7 +630,7 @@ const BlogSection = () => {
           src={require("../assets/images/logo-upperside.svg")}
           alt="logo-upper"
         />
-        <p className="text-navyblue font-bold text-4xl text-center py-3">
+        <p className="text-theme-navyblue font-bold text-4xl text-center py-3">
           Recent <span className="text-theme">Blog</span> Post
         </p>
       </div>

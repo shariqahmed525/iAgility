@@ -1,48 +1,44 @@
+const colors = {
+  darkblue: "#141660",
+  blue: "#2e319e",
+  mediumblue: "#161865",
+  lightblue: "#eaf7ff",
+  red: "#f53d4c",
+  skyblue: "#1daeef",
+  gray: "#cdd5dd",
+  darkgray: "#b5bdc4",
+  navyblue: "#0d0f59",
+  orange: "#fd7832",
+  primary: "#3490dc",
+  green: "#46a835",
+  secondary: "#ffed4a",
+  danger: "#e3342f",
+  purple: "#b428a4",
+  yellow: "#ffc800"
+};
+
 module.exports = {
   purge: [],
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
-      transitionProperty: {
-        display: "display"
-      },
       colors: {
         theme: {
-          DEFAULT: "#1daeef",
-          yellow: "#ffc800",
-          darkgray: "#b5bdc4",
-          red: "#f53d4c",
-          darkblue: "#141660",
-          blue: "#2e319e",
-          navyblue: "#0d0f59",
-          mediumblue: "#161865",
-          green: "#47a835",
-          purple: "#b428a4",
-          lightblue: "#eaf7ff",
-          orange: "#fd7832"
+          ...colors
         }
       },
       textColor: {
-        red: "#f53d4c",
-        theme: "#1daeef",
-        themegray: "#cdd5dd",
-        themedarkgray: "#b5bdc4",
-        navyblue: "#0d0f59",
-        orange: "#fd7832",
-        primary: "#3490dc",
-        green: "#46a835",
-        secondary: "#ffed4a",
-        danger: "#e3342f",
-        purple: "#b428a4",
-        yellow: "#ffc800"
+        theme: {
+          ...colors
+        }
       },
       spacing: {
-        "m-15": "-15px",
-        "m-53": "-53px",
         sm: "8px",
         md: "16px",
         lg: "24px",
-        xl: "48px"
+        xl: "48px",
+        "m-15": "-15px",
+        "m-53": "-53px"
       },
       width: {
         "1/7": "14.2857143%",
