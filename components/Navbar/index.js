@@ -1,5 +1,24 @@
 import React, { useRef } from "react";
 
+const navLeftItems = [
+  {
+    name: "Why",
+    link: "#"
+  },
+  {
+    name: "Talent",
+    link: "#"
+  },
+  {
+    name: "Insights",
+    link: "#"
+  },
+  {
+    name: "About Us",
+    link: "#"
+  }
+];
+
 const Navbar = () => {
   const navRef = useRef(null);
 
@@ -14,22 +33,19 @@ const Navbar = () => {
   };
 
   return (
-    <header className="flex flex-1 flex-col lg:flex-row items-center shadow-xl lg:px-16 py-3 justify-between">
-      <div
-        onClick={toggleMenu}
-        className="flex w-full lg:w-auto lg:inline-flex lg:flex-grow items-center lg:px-0 px-10 justify-between"
-      >
+    <header className="flex flex-col lg:flex-row items-center justify-between px-0 lg:px-16 py-3 shadow-xl">
+      <div className="flex w-full lg:w-auto lg:inline-flex items-center justify-between px-10 lg:px-0">
         {/* Logo */}
-        <a href="#" className="py-2 items-center">
+        <a href="#" className="py-2">
           <img
+            alt="logo"
             className="w-10/12 lg:w-full"
             src={require("../../assets/images/logo.svg")}
-            alt="logo"
           />
         </a>
 
         {/* Menu Icon */}
-        <div className="xl:hidden lg:hidden md:block">
+        <div onClick={toggleMenu} className="block lg:hidden cursor-pointer">
           <span className="w-10 rounded-md h-1 bg-theme block my-1.5"></span>
           <span className="w-8 rounded-md h-1 bg-theme block my-1.5"></span>
           <span className="w-10 rounded-md h-1 bg-theme block my-1.5"></span>
@@ -39,62 +55,29 @@ const Navbar = () => {
       {/* It contains both navbars */}
       <nav
         ref={navRef}
-        className="hidden top-nav w-full lg:flex lg:justify-between md:pl-0"
+        className="hidden w-full lg:flex lg:justify-between pl-0 2xl:pl-36 lg:pl-10"
       >
         {/* left navbar */}
         <ul className="lg:flex items-center flex-wrap">
-          {/* <li className="lg:px-4 py-3 lg:py-2 lg:border-b-0 border-b border-solid border-gray-200">
-            <a
-              href="#"
-              className="lg:px-0 px-10 text-sm text-center font-semibold"
-            >
-              Become A Talent
-            </a>
-          </li>
-          <li className="lg:px-4 py-3 lg:py-2 lg:border-b-0 border-b border-solid border-gray-200">
-            <a
-              href="#"
-              className="lg:px-0 px-10 text-sm text-center font-semibold"
-            >
-              Browse Talents
-            </a>
-          </li> */}
-          <li className="lg:px-4 py-3 lg:py-2 lg:border-b-0 border-b border-solid border-gray-200">
-            <a
-              href="#"
-              className="lg:px-0 px-10 text-sm text-center font-light"
-            >
-              Why
-            </a>
-          </li>
-          <li className="lg:px-4 py-3 lg:py-2 lg:border-b-0 border-b border-solid border-gray-200">
-            <a
-              href="#"
-              className="lg:px-0 px-10 text-sm text-center font-light"
-            >
-              Talent
-            </a>
-          </li>
-          <li className="lg:px-4 py-3 lg:py-2 lg:border-b-0 border-b border-solid border-gray-200">
-            <a
-              href="#"
-              className="lg:px-0 px-10 text-sm text-center font-light"
-            >
-              Insights
-            </a>
-          </li>
-          <li className="lg:px-4 py-3 lg:py-2 lg:border-b-0 border-b border-solid border-gray-200">
-            <a
-              href="#"
-              className="lg:px-0 px-10 text-sm text-center font-light"
-            >
-              About Us
-            </a>
-          </li>
+          {navLeftItems.map((v, i) => {
+            return (
+              <li
+                key={i}
+                className="lg:px-4 py-3 lg:py-2 lg:border-b-0 border-b border-solid border-gray-200"
+              >
+                <a
+                  href={v.link}
+                  className="lg:px-0 px-10 text-sm text-center font-light"
+                >
+                  {v.name}
+                </a>
+              </li>
+            );
+          })}
         </ul>
 
         {/* right navbar */}
-        <ul className="lg:flex items-center flex-wrap lg:justify-end">
+        <ul className="lg:flex lg:justify-end items-center flex-wrap">
           <li className="lg:px-4 py-3 lg:py-2 lg:border-b-0 border-b border-solid border-gray-200">
             <a
               href="#"
@@ -111,7 +94,7 @@ const Navbar = () => {
               Login
             </a>
           </li>
-          <li className="lg:px-2 py-5 lg:py-2 ">
+          <li className="lg:px-2 py-5 lg:py-2">
             <a
               href="#"
               className="lg:mx-0 mx-8 text-sm font-medium text-center text-white bg-theme-red shadow-red rounded-full py-3 px-7"

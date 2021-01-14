@@ -58,10 +58,6 @@ a {
   color: #1daeef !important;
 }
 
-.top-nav {
-  padding-left: 9rem !important;
-}
-
 .page-banner {
   background-image: url("../assets/images/banner-bg.svg"),
     url("../assets/images/medium-dotted-circle.svg");
@@ -161,9 +157,6 @@ a {
 }
 
 @media (max-width: 1400px) {
-  .top-nav {
-    padding-left: 2.5rem !important;
-  }
   .page-banner {
     background-position-x: calc(100% + 740px), -360px;
   }
@@ -219,9 +212,6 @@ a {
 }
 
 @media (max-width: 1024px) {
-  .top-nav {
-    padding-left: 0 !important;
-  }
   .banner-dotted-design {
     background-image: none;
   }
