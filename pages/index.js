@@ -647,7 +647,7 @@ const Home = () => {
   return (
     <div className="bg-white overflow-hidden">
       <Head>
-        <title>Micro Aility</title>
+        <title>Micro Agility</title>
         <link rel="icon" href={require("../assets/images/logo-white.svg")} />
       </Head>
       <Navbar />

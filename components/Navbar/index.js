@@ -77,7 +77,7 @@ const Navbar = () => {
         </ul>
 
         {/* right navbar */}
-        <ul className="lg:flex lg:justify-end items-center flex-wrap">
+        <ul className="lg:flex items-center flex-wrap">
           <li className="lg:px-4 py-3 lg:py-2 lg:border-b-0 border-b border-solid border-gray-200">
             <a
               href="#"
