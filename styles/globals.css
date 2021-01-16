@@ -158,7 +158,7 @@ a {
 
 @media (max-width: 1400px) {
   .page-banner {
-    background-position-x: calc(100% + 740px), -360px;
+    background-position-x: calc(100% + 740px), -400px;
   }
   .banner-dotted-design {
     background-position-x: 10px;
@@ -211,7 +211,7 @@ a {
   }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1023px) {
   .banner-dotted-design {
     background-image: none;
   }
