@@ -51,7 +51,7 @@ const AgilityBox = ({ name, icon, active, index, setActive }) => {
       <p
         className={`
           ${active ? "hidden text-white" : "text-theme-darkgray"} 
-          md:flex flex-1 justify-center px-1 text-center font-semibold text-sm xl:text-base 
+          md:flex flex-1 justify-center px-1 text-center font-semibold text-xs lg:text-sm 2xl:text-base 
         `}
       >
         {name}
