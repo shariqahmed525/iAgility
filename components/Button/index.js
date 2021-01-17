@@ -1,13 +1,20 @@
 import React from "react";
 import { FiChevronRight } from "react-icons/fi";
 
-const Button = ({ text, transparent, theme = "red" }) => {
+const Button = ({
+  text,
+  link = "#",
+  transparent,
+  theme = "red",
+  noBorder = false
+}) => {
   return (
     <a
-      href="#"
+      href={link}
       className={`text-sm font-medium text-center rounded-full py-2.5 px-5 flex justify-between items-center ${
         transparent
-          ? `bg-transparent border border-theme-${theme} border-solid text-theme-${theme}`
+          ? `bg-transparent ${!noBorder &&
+              "border"} border-theme-${theme} border-solid text-theme-${theme}`
           : `text-white bg-theme-red shadow-red`
       }`}
     >

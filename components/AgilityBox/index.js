@@ -20,7 +20,7 @@ const getClasses = key => {
   }
 };
 
-const AgilityBox = ({ name, icon, active, index, setActive }) => {
+const AgilityBox = ({ name, icon, active, index, handleActiveIndex }) => {
   return (
     <div
       className={`
@@ -31,7 +31,7 @@ const AgilityBox = ({ name, icon, active, index, setActive }) => {
         } border 
         border-solid rounded-full md:w-32 md:h-20 md:flex flex-row justify-content items-center p-5 md:p-3
       `}
-      onClick={() => !active && setActive(index)}
+      onClick={() => !active && handleActiveIndex(index)}
     >
       <div
         className={`

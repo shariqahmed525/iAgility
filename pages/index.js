@@ -176,48 +176,46 @@ const BlogBoxes = [
 const BannerSection = () => {
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 px-5 lg:px-16">
-      <div className="grid justify-center lg:justify-end pt-10 pb-3 lg:pt-32">
-        <div>
+      <div className="flex justify-center lg:justify-end pt-10 lg:pt-32 pb-3">
+        <section>
           {/* Text Section */}
-          <div>
-            <p className="text-2xl text-theme-navyblue text-center lg:text-left font-semibold">
-              Hire an iAgilian
-            </p>
-            <p className="text-2xl text-theme-navyblue text-center lg:text-left font-light pt-0.5 pb-1">
+          <div className="text-theme-navyblue text-center lg:text-left">
+            <p className="text-2xl font-semibold">Hire an iAgilian</p>
+            <p className="text-2xl font-light pt-0.5 pb-1">
               &amp; Transform the way you work with an
             </p>
-            <p className="text-5xl text-theme-navyblue text-center lg:text-left font-bold pt-1">
+            <p className="text-5xl font-bold pt-1">
               Independent <span className="text-theme-skyblue">Consultant</span>
             </p>
-            <p className="text-sm text-theme-navyblue text-center lg:text-left font-light py-5">
+            <p className="text-sm font-light py-5">
               For Sophisticated Clients and Consultants
             </p>
-            <a
-              href="#"
-              className="text-sm mt-2 mx-auto lg:mx-0 w-40 font-medium text-center text-white bg-theme-red shadow-red rounded-full py-3 px-4 flex justify-between items-center"
-            >
-              <span className="flex flex-1 justify-center">Hire A Talent</span>
-              <FiChevronRight />
-            </a>
+            <div className="flex justify-center lg:justify-start">
+              <Button text="Hire A Talent" />
+            </div>
           </div>
-          {/* Quote Slider, only show on large devices */}
-          <div className="hidden py-10 lg:flex">
+
+          {/* Quote Slider, only show when device width will be greater than 1023 */}
+          <div className="hidden lg:flex py-10">
             <BannerQuote />
           </div>
-        </div>
+        </section>
       </div>
+
+      {/* Card section */}
       <div className="flex justify-center py-1 lg:pt-32 banner-dotted-design">
-        <div>
+        <section>
           <UserCard name="Mohammad Adnan" expertise="Finance Expert" />
           <UserCard name="Mohammad Adnan" expertise="Finance Expert" />
-        </div>
-        <div className="mt-12 lg:mt-32">
+        </section>
+        <section className="mt-12 lg:mt-32">
           <UserCard name="Mohammad Adnan" expertise="Finance Expert" />
           <UserCard name="Mohammad Adnan" expertise="Finance Expert" />
-        </div>
+        </section>
       </div>
-      {/* Quote Slider, show on medium or smaller devices */}
-      <div className="py-3 lg:hidden">
+
+      {/* Quote Slider, only show when device width will be less than 1024 */}
+      <div className="lg:hidden py-3">
         <BannerQuote />
       </div>
     </div>
@@ -225,23 +223,23 @@ const BannerSection = () => {
 };
 
 const WhatIsiAgility = () => {
-  const [active, setActive] = useState(1);
+  const [activeIndex, setActiveIndex] = useState(1);
 
   const handleActions = action => {
     if (action === "+") {
-      active === iAgilityBoxes.length - 1
-        ? setActive(0)
-        : setActive(active + 1);
+      activeIndex === iAgilityBoxes.length - 1
+        ? setActiveIndex(0)
+        : setActiveIndex(activeIndex + 1);
     } else {
-      active === 0
-        ? setActive(iAgilityBoxes.length - 1)
-        : setActive(active - 1);
+      activeIndex === 0
+        ? setActiveIndex(iAgilityBoxes.length - 1)
+        : setActiveIndex(activeIndex - 1);
     }
   };
 
   const iAgilityText = () => {
     return (
-      <>
+      <section>
         <p className="text-base text-center xl:text-left font-light py-0 xl:py-5">
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit
           reprehenderit harum atque, nulla veritatis libero magnam odit
@@ -263,15 +261,11 @@ const WhatIsiAgility = () => {
         </p>
         <div className="flex flex-col xl:flex-row items-center pt-5">
           <Button text="Contact iAgility Today" />
-          <a
-            href="#"
-            className="text-sm mt-2 mx-auto lg:mx-0 w-36 font-medium text-center text-theme-red rounded-full py-3 px-4 flex justify-between items-center"
-          >
-            <span className="flex flex-1 justify-center">Read More</span>
-            <FiChevronRight className="text-theme-red" />
-          </a>
+          <span className="ml-2 mt-3 xl:mt-0">
+            <Button text="Read More" transparent noBorder />
+          </span>
         </div>
-      </>
+      </section>
     );
   };
 
@@ -279,15 +273,11 @@ const WhatIsiAgility = () => {
     return (
       <div
         onClick={handler}
-        className={
-          "flex md:hidden flex-row justify-content items-center cursor-pointer"
-        }
+        className="flex flex-row justify-content items-center md:hidden cursor-pointer"
       >
         <div
-          className={
-            "w-16 h-16 bg-theme-skyblue border border-theme shadow-theme border-opacity-75 rounded-full flex items-center justify-center"
-          }
           style={{ minWidth: "3.5rem" }}
+          className="w-16 h-16 bg-theme-skyblue border border-theme shadow-theme border-opacity-75 rounded-full flex items-center justify-center"
         >
           {arrow}
         </div>
@@ -297,16 +287,16 @@ const WhatIsiAgility = () => {
 
   return (
     <div className="what-is-dotted-design">
-      <div className="py-10 px-5 lg:px-16 grid grid-cols-12 gap-4">
-        <div className="col-start-1 col-span-12 lg:col-start-3 lg:col-span-8 flex flex-col items-center">
+      <div className="grid grid-cols-12 gap-4 px-5 lg:px-16 py-10">
+        <div className="col-start-1 lg:col-start-3 col-span-12 lg:col-span-8 flex flex-col items-center">
           <img
-            src={require("../assets/images/logo-upperside-light.svg")}
             alt="logo-upper"
+            src={require("../assets/images/logo-upperside-light.svg")}
           />
-          <p className="text-theme-navyblue font-bold text-4xl text-center py-3">
+          <p className="text-4xl text-theme-navyblue text-center font-bold py-3">
             What Is <span className="text-theme-skyblue">iAgility?</span>
           </p>
-          <p className="py-3 font-light text-center max-w-2xl lg:max-w-4xl">
+          <p className="text-center font-light max-w-2xl lg:max-w-4xl py-3">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis
             et facilis, vel quos pariatur eius amet rerum! Quas eveniet eius
             recusandae aspernatur sunt, at pariatur? Earum dolor eaque debitis?
@@ -316,26 +306,35 @@ const WhatIsiAgility = () => {
           </p>
         </div>
       </div>
-      <div className="px-5 lg:px-16 grid grid-cols-12 gap-4">
-        <div className="col-start-1 col-span-12 xl:col-start-3 xl:col-span-8 flex flex-col items-center pt-1">
-          <div className="w-full flex items-center justify-between">
+      <div className="grid grid-cols-12 gap-4 px-5 lg:px-16">
+        <div className="col-start-1 xl:col-start-3 col-span-12 xl:col-span-8 flex flex-col items-center pt-1">
+          <div className="flex items-center justify-between w-full">
+            {/* Left arrow, only show when device width will be less than 768 */}
             {iAgilityActions(
               <FiArrowLeft className="text-white text-2xl" />,
               () => handleActions("-")
             )}
-            <div className="flex border-t-2 border-theme border-opacity-50 border-dotted flex-1 md:hidden"></div>
+
+            {/* Dotted line, only show when device width will be less than 768 */}
+            <div className="flex flex-1 md:hidden border-t-2 border-theme border-opacity-50 border-dotted"></div>
+
+            {/* Tab section */}
             {iAgilityBoxes.map((v, i) => {
               return (
                 <AgilityBox
                   key={i}
                   {...v}
                   index={i}
-                  active={active === i}
-                  setActive={index => setActive(index)}
+                  active={activeIndex === i}
+                  handleActiveIndex={index => setActiveIndex(index)}
                 />
               );
             })}
-            <div className="flex border-t-2 border-theme border-opacity-50 border-dotted flex-1 md:hidden"></div>
+
+            {/* Dotted line, only show when device width will be less than 768  */}
+            <div className="flex flex-1 md:hidden border-t-2 border-theme border-opacity-50 border-dotted"></div>
+
+            {/* Right arrow, only show when device width will be less than 768 */}
             {iAgilityActions(
               <FiArrowRight className="text-white text-2xl" />,
               () => handleActions("+")
@@ -343,19 +342,19 @@ const WhatIsiAgility = () => {
           </div>
         </div>
       </div>
-      <div className="py-10 px-5 lg:px-16 grid grid-cols-12 gap-4">
-        <div className="col-start-1 col-span-12 lg:col-start-3 lg:col-span-8 flex flex-col xl:flex-row items-center">
+      <div className="grid grid-cols-12 gap-4 px-5 lg:px-16 py-10">
+        <div className="col-start-1 lg:col-start-3 col-span-12 lg:col-span-8 flex flex-col xl:flex-row items-center">
           <div className="flex flex-1 flex-col">
             <h3 className="font-bold text-3xl text-center xl:text-left py-2">
-              {iAgilityBoxes[active].name}
+              {iAgilityBoxes[activeIndex].name}
             </h3>
             <div className="hidden xl:block">{iAgilityText()}</div>
           </div>
           <div className="flex flex-1 flex-col">
             <img
-              src={iAgilityBoxes[active].img}
-              className="w-full max-h-100"
               alt=""
+              className="w-full max-h-100"
+              src={iAgilityBoxes[activeIndex].img}
             />
             <div className="block xl:hidden">{iAgilityText()}</div>
           </div>

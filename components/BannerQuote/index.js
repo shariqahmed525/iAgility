@@ -5,9 +5,9 @@ import { FiArrowLeft, FiArrowRight } from "react-icons/fi";
 const BannerQuote = () => {
   return (
     <div className="flex flex-col items-center lg:items-start">
-      <div>
+      <section>
         <ThreeDots />
-      </div>
+      </section>
       <p className="text-gray-500 text-base lg:text-sm max-w-md pt-3 text-center lg:text-left">
         <q>
           {" "}

@@ -8,7 +8,7 @@ const Reviewer = ({ name, text, video }) => {
       >
         {name}
       </span>
-      <span className={`px-3  ${video ? "text-white" : "text-gray-200"}`}>
+      <span className={`px-3 ${video ? "text-white" : "text-gray-200"}`}>
         |
       </span>
       <span className={`text-xs ${video ? "text-white" : "text-gray-400"}`}>
