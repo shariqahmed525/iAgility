@@ -316,7 +316,7 @@ const WhatIsiAgility = () => {
           )}
 
           {/* Dotted line, only show when device width will be less than 768 */}
-          <div className="flex flex-1 md:hidden border-t-2 border-theme border-opacity-50 border-dotted"></div>
+          <div className="flex flex-1 md:hidden border-t-2 border-theme-skyblue border-opacity-50 border-dotted"></div>
 
           {/* Tab section */}
           {iAgilityBoxes.map((v, i) => {
@@ -332,7 +332,7 @@ const WhatIsiAgility = () => {
           })}
 
           {/* Dotted line, only show when device width will be less than 768  */}
-          <div className="flex flex-1 md:hidden border-t-2 border-theme border-opacity-50 border-dotted"></div>
+          <div className="flex flex-1 md:hidden border-t-2 border-theme-skyblue border-opacity-50 border-dotted"></div>
 
           {/* Right arrow, only show when device width will be less than 768 */}
           {iAgilityActions(
@@ -365,14 +365,14 @@ const WhatIsiAgility = () => {
 };
 
 const HowDoesIAgility = () => {
-  const [active, setActive] = useState(0);
+  const [activeIndex, setActiveIndex] = useState(1);
 
   return (
-    <div className="py-16 px-5 lg:px-16 grid grid-cols-12 gap-4 bg-theme-skyblue bg-opacity-5 how-does-dotted-design">
+    <div className="grid grid-cols-12 gap-4 py-16 px-5 lg:px-16 bg-theme-skyblue bg-opacity-5 how-does-dotted-design">
       <div className="col-start-1 col-span-12 lg:col-start-3 lg:col-span-8 flex flex-col items-center">
         <img
-          src={require("../assets/images/logo-upperside.svg")}
           alt="logo-upper"
+          src={require("../assets/images/logo-upperside.svg")}
         />
         <p className="text-theme-navyblue font-bold text-4xl text-center py-3">
           How Does <span className="text-theme-skyblue">iAgility?</span> Work
@@ -386,23 +386,23 @@ const HowDoesIAgility = () => {
           </a>
         </p>
       </div>
-      <div className="col-start-1 col-span-12 md:col-start-3 md:col-span-8 flex flex-1 flex-col xl:flex-row items-center justify-between">
+      <div className="col-start-1 md:col-start-3 col-span-12 md:col-span-8 flex flex-1 flex-col xl:flex-row items-center justify-between">
         {HowDoesIAgilityBoxes.map((v, i) => (
           <div
             key={i}
-            className={`${active !== i &&
+            className={`${activeIndex !== i &&
               "hidden"} xl:flex flex-1 flex-col items-center justify-between p-3 relative`}
           >
             <IAgilityWorkBox
               {...v}
               index={i}
-              active={active === i}
-              setActive={index => setActive(index)}
+              active={activeIndex === i}
+              setActive={index => setActiveIndex(index)}
             />
           </div>
         ))}
       </div>
-      <div className="col-start-1 col-span-12 md:col-start-3 md:col-span-8 flex items-center justify-center my-0 md:my-5">
+      <div className="col-start-1 md:col-start-3 col-span-12 md:col-span-8 flex items-center justify-center my-0 md:my-5">
         <a
           href="#"
           className="text-sm xl:mt-2 mx-auto lg:mx-0 w-56 font-medium text-center text-white bg-theme-red shadow-red rounded-full py-3 px-4 flex justify-between items-center"
