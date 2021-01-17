@@ -190,7 +190,7 @@ const BannerSection = () => {
             <p className="text-sm font-light py-5">
               For Sophisticated Clients and Consultants
             </p>
-            <div className="flex justify-center lg:justify-start">
+            <div className="flex justify-center lg:justify-start mt-2">
               <Button text="Hire A Talent" />
             </div>
           </div>
@@ -306,42 +306,42 @@ const WhatIsiAgility = () => {
           </p>
         </div>
       </div>
+
       <div className="grid grid-cols-12 gap-4 px-5 lg:px-16">
-        <div className="col-start-1 xl:col-start-3 col-span-12 xl:col-span-8 flex flex-col items-center pt-1">
-          <div className="flex items-center justify-between w-full">
-            {/* Left arrow, only show when device width will be less than 768 */}
-            {iAgilityActions(
-              <FiArrowLeft className="text-white text-2xl" />,
-              () => handleActions("-")
-            )}
+        <div className="w-full col-start-1 xl:col-start-3 col-span-12 xl:col-span-8 flex items-center justify-between pt-1">
+          {/* Left arrow, only show when device width will be less than 768 */}
+          {iAgilityActions(
+            <FiArrowLeft className="text-white text-2xl" />,
+            () => handleActions("-")
+          )}
 
-            {/* Dotted line, only show when device width will be less than 768 */}
-            <div className="flex flex-1 md:hidden border-t-2 border-theme border-opacity-50 border-dotted"></div>
+          {/* Dotted line, only show when device width will be less than 768 */}
+          <div className="flex flex-1 md:hidden border-t-2 border-theme border-opacity-50 border-dotted"></div>
 
-            {/* Tab section */}
-            {iAgilityBoxes.map((v, i) => {
-              return (
-                <AgilityBox
-                  key={i}
-                  {...v}
-                  index={i}
-                  active={activeIndex === i}
-                  handleActiveIndex={index => setActiveIndex(index)}
-                />
-              );
-            })}
+          {/* Tab section */}
+          {iAgilityBoxes.map((v, i) => {
+            return (
+              <AgilityBox
+                key={i}
+                {...v}
+                index={i}
+                active={activeIndex === i}
+                handleActiveIndex={index => setActiveIndex(index)}
+              />
+            );
+          })}
 
-            {/* Dotted line, only show when device width will be less than 768  */}
-            <div className="flex flex-1 md:hidden border-t-2 border-theme border-opacity-50 border-dotted"></div>
+          {/* Dotted line, only show when device width will be less than 768  */}
+          <div className="flex flex-1 md:hidden border-t-2 border-theme border-opacity-50 border-dotted"></div>
 
-            {/* Right arrow, only show when device width will be less than 768 */}
-            {iAgilityActions(
-              <FiArrowRight className="text-white text-2xl" />,
-              () => handleActions("+")
-            )}
-          </div>
+          {/* Right arrow, only show when device width will be less than 768 */}
+          {iAgilityActions(
+            <FiArrowRight className="text-white text-2xl" />,
+            () => handleActions("+")
+          )}
         </div>
       </div>
+
       <div className="grid grid-cols-12 gap-4 px-5 lg:px-16 py-10">
         <div className="col-start-1 lg:col-start-3 col-span-12 lg:col-span-8 flex flex-col xl:flex-row items-center">
           <div className="flex flex-1 flex-col">
