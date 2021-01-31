@@ -416,7 +416,7 @@ const HowDoesIAgility = () => {
 
 const AreYouLooking = () => {
   return (
-    <div className="flex w-full flex-col lg:flex-row bg-gradient-to-r from-theme-blue to-theme-darkblue items-center justify-center py-10">
+    <div className="flex w-full flex-col lg:flex-row items-center justify-center bg-gradient-to-r from-theme-blue to-theme-darkblue py-10">
       <p className="text-xl text-white font-medium max-w-xs text-center lg:text-right">
         Are you looking to provide services and become an iAgility?
       </p>
@@ -429,19 +429,19 @@ const AreYouLooking = () => {
 
 const ClientsFeedBack = () => {
   return (
-    <div className="py-16 px-5 lg:px-16 grid grid-cols-12 gap-4 bg-theme-lightblue our-client-dotted-design">
-      <div className="col-start-1 col-span-12 lg:col-start-3 lg:col-span-8">
+    <div className="grid grid-cols-12 gap-4 py-16 px-5 lg:px-16 bg-theme-lightblue our-client-dotted-design">
+      <div className="col-start-1 lg:col-start-3 col-span-12 lg:col-span-8">
         <p className="text-2xl lg:text-3xl text-theme-navyblue font-bold text-center py-3">
           Our Client's Feedback
         </p>
       </div>
-      <div className="col-start-1 col-span-12 xl:col-start-3 xl:col-span-8 lg:col-start-2 lg:col-span-10 flex flex-col-reverse lg:flex-row items-center justify-between py-2">
+      <div className="col-start-1 xl:col-start-3 lg:col-start-2 col-span-12 xl:col-span-8 lg:col-span-10 flex flex-col-reverse lg:flex-row items-center justify-between py-2">
         {[0, 1].map((_, i) => {
           return (
             <div
               key={i}
-              className={`${i === 0 &&
-                "hidden "} lg:inline-block bg-white shadow-xl rounded-3xl my-2 p-6 w-full sm:w-80 md:w-80 lg:w-32 flex flex-col items-center lg:items-start`}
+              className={`${i === 0 && "hidden "} 
+              lg:inline-block bg-white shadow-xl rounded-3xl my-2 p-6 w-full sm:w-80 md:w-80 lg:w-32 flex flex-col items-center lg:items-start`}
             >
               <div className="flex py-2">
                 <ThreeDots />
@@ -460,30 +460,21 @@ const ClientsFeedBack = () => {
             </div>
           );
         })}
-        <div
-          className="bg-white shadow-xl rounded-3xl my-2 p-6 w-full h-56 lg:min-h-90 sm:w-80 md:w-80 relative lg:w-32"
-          style={{
-            backgroundImage:
-              "url(" + require("../assets/images/tutor1.png") + ")",
-            backgroundSize: "cover",
-            backgroundOrigin: "border-box",
-            backgroundRepeat: "no-repeat"
-          }}
-        >
-          <div className="py-5 flex flex-col-reverse lg:flex-row justify-between items-center absolute w-full bottom-0 px-5 left-0">
+        <div className="w-full h-56 lg:min-h-90 lg:w-32 md:w-80 sm:w-80 bg-white shadow-xl rounded-3xl my-2 p-6 relative client-video-bg">
+          <div className="w-full flex flex-col-reverse lg:flex-row justify-between items-center absolute bottom-0 left-0 py-5 px-5">
             <div className="mt-3 lg:mt-0">
               <p className="text-white text-sm text-center lg:text-left font-medium">
                 Mohammad Hashim
               </p>
               <Reviewer video name="M. Adnan" text="Best Company" />
             </div>
-            <span className="w-14 h-14 rounded-full bg-white shadow-lg border-8 border-solid border-red border-opacity-25 flex justify-center items-center cursor-pointer">
+            <span className="w-14 h-14 flex justify-center items-center rounded-full bg-white shadow-lg border-8 border-solid border-red border-opacity-25 cursor-pointer">
               <BiPlay className="text-theme-red text-4xl" />
             </span>
           </div>
         </div>
       </div>
-      <div className="col-start-1 col-span-12 lg:col-start-3 lg:col-span-8 flex py-2 justify-center items-center">
+      <div className="col-start-1 lg:col-start-3 col-span-12 lg:col-span-8 flex justify-center items-center py-2">
         <span className="w-2 h-2 mx-1 rounded-full inline-flex bg-theme-skyblue"></span>
         <span className="w-2 h-2 mx-1 rounded-full inline-flex bg-white"></span>
         <span className="w-2 h-2 mx-1 rounded-full inline-flex bg-white"></span>
@@ -494,15 +485,15 @@ const ClientsFeedBack = () => {
 
 const WhyChooseIAgility = () => {
   return (
-    <div className="py-12 px-5 lg:px-16 grid grid-cols-12 gap-4 why-choose-dotted-design">
-      <div className="col-start-1 col-span-12 lg:col-start-3 lg:col-span-8 flex flex-col-reverse 2xl:flex-row items-center justify-between">
-        <div className="py-10 flex flex-col sm:flex-row justify-center items-center pl-0 lg:pl-xl why-choose-solid-design">
-          <div className="flex w-full sm:w-auto flex-col mx-2 justify-center">
+    <div className="grid grid-cols-12 gap-4 py-12 px-5 lg:px-16 why-choose-dotted-design">
+      <div className="col-start-1 lg:col-start-3 col-span-12 lg:col-span-8 flex flex-col-reverse 2xl:flex-row items-center justify-between">
+        <div className="flex flex-col sm:flex-row justify-center items-center py-10 pl-0 lg:pl-xl why-choose-solid-design">
+          <div className="w-full sm:w-auto flex flex-col justify-center mx-2">
             {WhyChooseIAgilityBoxes.slice(0, 3).map((v, i) => (
               <WhyChooseBox key={i} {...v} />
             ))}
           </div>
-          <div className="flex w-full sm:w-auto flex-col mx-2 justify-center">
+          <div className="w-full sm:w-auto flex flex-col justify-center mx-2">
             {WhyChooseIAgilityBoxes.slice(3, 5).map((v, i) => (
               <WhyChooseBox key={i} {...v} />
             ))}
@@ -510,10 +501,7 @@ const WhyChooseIAgility = () => {
         </div>
         <div className="w-full 2xl:w-47 lg:w-6/7 sm:w-5/7 pt-10 pl-0 lg:pl-xl">
           <div className="flex justify-center 2xl:justify-start">
-            <img
-              src={require("../assets/images/logo-upperside-light.svg")}
-              alt="logo-upper"
-            />
+            <img src={require("../assets/images/logo-upperside-light.svg")} />
           </div>
           <p className="text-theme-navyblue font-bold text-4xl xl:text-5xl text-center 2xl:text-left py-3">
             Why Choose <span className="text-theme-skyblue">iAgility</span> Over
@@ -539,12 +527,9 @@ const WhyChooseIAgility = () => {
 
 const WhatCanAnIAgilian = () => {
   return (
-    <div className="py-12 px-5 lg:px-16 grid grid-cols-12 gap-4 bg-theme-skyblue what-can-an-dotted-design">
-      <div className="col-start-1 col-span-12 lg:col-start-3 lg:col-span-8 flex flex-col items-center">
-        <img
-          src={require("../assets/images/logo-upperside.svg")}
-          alt="logo-upper"
-        />
+    <div className="grid grid-cols-12 gap-4 bg-theme-skyblue py-12 px-5 lg:px-16 what-can-an-dotted-design">
+      <div className="col-start-1 lg:col-start-3 col-span-12 lg:col-span-8 flex flex-col items-center">
+        <img src={require("../assets/images/logo-upperside.svg")} />
         <p className="text-white font-bold max-w-sm text-4xl text-center pt-5 pb-3">
           What Can An iAgilian Do For You?
         </p>
@@ -558,24 +543,13 @@ const WhatCanAnIAgilian = () => {
           </a>
         </p>
       </div>
-      <div className="col-start-1 col-span-12 lg:col-start-3 lg:col-span-8 flex gap-4 mt-5 justify-between overflow-auto hide-scroll py-4 pl-4">
+      <div className="col-start-1 lg:col-start-3 col-span-12 lg:col-span-8 flex gap-4 justify-between overflow-auto mt-5 py-4 pl-4 hide-scroll">
         {WhatCanDoBoxes.map((v, i) => (
           <WhatCanDoBox {...v} index={i} key={i} />
         ))}
         <a href="#" className="hidden md:inline-block">
           <div
-            className={`
-              p-5 shadow-xl 
-              bg-theme-red rounded-3xl
-              h-44
-              flex
-              flex-col
-              items-center
-              justify-around
-              mr-4
-              w-190px
-            `}
-            style={{ minWidth: 190 }}
+            className={`h-44 w-190px min-w-190px flex flex-col items-center justify-around shadow-xl bg-theme-red rounded-3xl mr-4 p-5`}
           >
             <p className="text-center text-lg font-semibold text-white">
               Other Technology Servcies
@@ -593,8 +567,8 @@ const WhatCanAnIAgilian = () => {
 
 const CalendarSection = () => {
   return (
-    <div className="py-4 px-5 lg:px-16 grid grid-cols-12 gap-4 bg-theme-lightblue">
-      <div className="col-start-1 col-span-12 lg:col-start-3 lg:col-span-8 flex flex-col lg:flex-row items-center justify-center">
+    <div className="grid grid-cols-12 gap-4 bg-theme-lightblue py-4 px-5 lg:px-16">
+      <div className="col-start-1 lg:col-start-3 col-span-12 lg:col-span-8 flex flex-col lg:flex-row items-center justify-center">
         <div className="w-full 2xl:w-47 lg:w-6/7 sm:w-5/7 pt-10 flex flex-col items-center lg:items-start">
           <p className="text-theme-navyblue font-bold text-4xl xl:text-5xl max-w-lg lg:max-w-md text-center lg:text-left py-3">
             Need a Different Kind of{" "}
@@ -608,7 +582,7 @@ const CalendarSection = () => {
           </div>
         </div>
         <div className="w-full 2xl:w-47 lg:w-6/7 sm:w-5/7 pt-10 pl-lg md:pl-xl calendar-dotted-design">
-          <img alt="" src={require("../assets/images/calendar.png")} />
+          <img src={require("../assets/images/calendar.png")} />
         </div>
       </div>
     </div>
@@ -617,22 +591,19 @@ const CalendarSection = () => {
 
 const BlogSection = () => {
   return (
-    <div className="py-16 px-5 lg:px-16 grid grid-cols-12 gap-4">
-      <div className="col-start-1 col-span-12 lg:col-start-3 lg:col-span-8 flex flex-col items-center">
-        <img
-          src={require("../assets/images/logo-upperside.svg")}
-          alt="logo-upper"
-        />
+    <div className="grid grid-cols-12 gap-4 py-16 px-5 lg:px-16">
+      <div className="col-start-1 lg:col-start-3 col-span-12 lg:col-span-8 flex flex-col items-center">
+        <img src={require("../assets/images/logo-upperside.svg")} />
         <p className="text-theme-navyblue font-bold text-4xl text-center py-3">
           Recent <span className="text-theme-skyblue">Blog</span> Post
         </p>
       </div>
-      <div className="col-start-1 col-span-12 xl:col-start-3 xl:col-span-8 gap-4 2xl:gap-8 flex flex-1 flex-col lg:flex-row items-center justify-between">
+      <div className="col-start-1 xl:col-start-3 col-span-12 xl:col-span-8 gap-4 2xl:gap-8 flex flex-1 flex-col lg:flex-row items-center justify-between">
         {BlogBoxes.map((v, i) => (
           <BlogBox key={i} {...v} />
         ))}
       </div>
-      <div className="col-start-1 col-span-12 md:col-start-3 md:col-span-8 flex items-center justify-center my-4 md:my-7">
+      <div className="col-start-1 md:col-start-3 col-span-12 md:col-span-8 flex items-center justify-center my-4 md:my-7">
         <Button text="More Posts" transparent />
       </div>
     </div>

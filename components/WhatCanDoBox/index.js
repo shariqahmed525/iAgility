@@ -4,28 +4,14 @@ import { HiArrowRight } from "react-icons/hi";
 const WhatCanDoBox = ({ name, img, theme, index }) => {
   return (
     <div
-      className={`
-          rounded-3xl
-          h-52
-          hover:shadow-xl
-          cursor-pointer
-          hover:bg-theme-${theme}
-          wrapper
-      `}
+      className={`h-52 rounded-3xl hover:bg-theme-${theme} hover:shadow-xl cursor-pointer wrapper`}
     >
       <div
-        className={`
-        p-5
-        shadow-xl
-        bg-white rounded-3xl
-        h-44
-        w-200px
-        min-w-200px
-        details-wrapper
-        ${index === 2 ? "md:w-250px md:min-w-250px" : "w-200px min-w-200px"}
-      `}
+        className={`h-44 w-200px min-w-200px ${
+          index === 2 ? "md:w-250px md:min-w-250px" : "w-200px min-w-200px"
+        } shadow-xl bg-white rounded-3xl p-5 details-wrapper`}
       >
-        <img alt="" src={img} className="mb-3 mx-auto w-12" />
+        <img src={img} className="mb-3 mx-auto w-12" />
         <p
           className={`text-center text-base md:text-lg font-semibold text-theme-${theme}`}
         >

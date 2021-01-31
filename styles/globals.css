@@ -105,6 +105,13 @@ a {
   background-position: 280px 70px;
 }
 
+.client-video-bg {
+  background-image: url("../assets/images/tutor.png");
+  background-size: cover;
+  background-origin: border-box;
+  background-repeat: no-repeat;
+}
+
 .why-choose-dotted-design {
   background-image: url("../assets/images/medium-dotted-circle.svg");
   background-size: auto;

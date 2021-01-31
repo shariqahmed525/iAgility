@@ -5,7 +5,7 @@ import { BsFillPlusCircleFill } from "react-icons/bs";
 const WhyChooseBox = ({ name, coloredText, text, theme }) => {
   return (
     <div
-      className={`bg-white shadow-xl rounded-3xl my-2 p-6 w-full sm:w-80 md:w-80 lg:w-64 flex flex-row sm:flex-col items-center lg:items-start`}
+      className={`w-full sm:w-80 md:w-80 lg:w-64 flex flex-row sm:flex-col items-center lg:items-start bg-white shadow-xl rounded-3xl my-2 p-6`}
     >
       <CgCheckO
         className={`my-2 ml-1 self-start text-4xl sm:text-2xl text-theme-${theme}`}
