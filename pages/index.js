@@ -369,11 +369,8 @@ const HowDoesIAgility = () => {
 
   return (
     <div className="grid grid-cols-12 gap-4 py-16 px-5 lg:px-16 bg-theme-skyblue bg-opacity-5 how-does-dotted-design">
-      <div className="col-start-1 col-span-12 lg:col-start-3 lg:col-span-8 flex flex-col items-center">
-        <img
-          alt="logo-upper"
-          src={require("../assets/images/logo-upperside.svg")}
-        />
+      <div className="col-start-1 lg:col-start-3 col-span-12 lg:col-span-8 flex flex-col items-center">
+        <img alt="logo" src={require("../assets/images/logo-upperside.svg")} />
         <p className="text-theme-navyblue font-bold text-4xl text-center py-3">
           How Does <span className="text-theme-skyblue">iAgility?</span> Work
         </p>
