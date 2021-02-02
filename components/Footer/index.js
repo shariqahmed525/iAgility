@@ -6,13 +6,16 @@ import TextField, { Input } from "@material/react-text-field";
 
 const socialIcons = [
   {
-    icon: <ImFacebook className="text-white text-2xl" />
+    icon: <ImFacebook className="text-white text-2xl" />,
+    link: "#"
   },
   {
-    icon: <CgTwitter className="text-white text-2xl" />
+    icon: <CgTwitter className="text-white text-2xl" />,
+    link: "#"
   },
   {
-    icon: <SiInstagram className="text-white text-2xl" />
+    icon: <SiInstagram className="text-white text-2xl" />,
+    link: "#"
   }
 ];
 
@@ -71,7 +74,7 @@ const SocialIconsRender = ({ theme }) =>
   socialIcons.map((v, i) => (
     <a
       key={i}
-      href="#"
+      href={v.link}
       className={`w-14 h-14 flex justify-center items-center rounded-full bg-theme-${theme} mx-1 shadow-xl`}
     >
       {v.icon}
@@ -99,11 +102,7 @@ const MobileLayout = () => {
           background: "transparent"
         }}
       >
-        <Input
-          value={text}
-          className="text-white"
-          onChange={e => setText(e.currentTarget.value)}
-        />
+        <Input value={text} onChange={e => setText(e.currentTarget.value)} />
       </TextField>
     </div>
   );

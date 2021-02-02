@@ -15,11 +15,7 @@ const IAgilityWorkBox = ({
   return (
     <>
       {arrowImg && (
-        <img
-          alt=""
-          src={arrowImg}
-          className="hidden xl:inline-block arrow-img"
-        />
+        <img src={arrowImg} className="hidden xl:inline-block arrow-img" />
       )}
       <div
         className={`hidden xl:inline-flex  

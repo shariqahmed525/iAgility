@@ -543,7 +543,7 @@ const WhatCanAnIAgilian = () => {
           </a>
         </p>
       </div>
-      <div className="col-start-1 lg:col-start-3 col-span-12 lg:col-span-8 flex gap-4 justify-between overflow-auto mt-5 py-4 pl-4 hide-scroll">
+      <div className="col-start-1 lg:col-start-3 col-span-12 lg:col-span-8 gap-4 flex justify-between overflow-auto mt-5 py-4 pl-4 hide-scroll">
         {WhatCanDoBoxes.map((v, i) => (
           <WhatCanDoBox {...v} index={i} key={i} />
         ))}

@@ -20,7 +20,7 @@ const BlogBox = ({ img, date, month, year, name, text }) => {
         {text}
       </p>
       <div className="w-full hidden lg:flex justify-center relative">
-        <div className="w-11 h-11 flex justify-center items-center cursor-pointer shadow-theme bg-theme-skyblue rounded-full mx-auto absolute bottom-0 mb-m-53">
+        <div className="w-11 h-11 flex justify-center items-center cursor-pointer shadow-theme bg-theme-skyblue rounded-full absolute bottom-0 mb-m-53">
           <HiArrowRight className="text-white text-xl" />
         </div>
       </div>
